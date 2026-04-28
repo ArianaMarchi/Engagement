@@ -1,0 +1,293 @@
+/* ===== TITULOS ===== */
+
+h1, h2, h3 {
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.stMainBlockContainer {
+            max-width: 1200px; 
+            padding-top: 3rem;   
+            padding-bottom: 5rem; 
+            padding-left: 1rem;   
+            padding-right: 1rem;
+            margin: auto;         
+        }
+
+/* ===== METRICS ===== */
+
+[data-testid="stMetric"] {
+    background-color: var(--st-primary-color);
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid #7674748e;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
+}
+
+[data-testid="stMetricValue"] {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+[data-theme="dark"] [data-testid="stMetricLabel"] {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+[data-theme="light"] [data-testid="stMetricLabel"] {
+    font-size: 14px;
+    color: #666;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 12px;
+}
+
+
+[data-theme="light"] [data-testid="stBaseButton-segmented_controlActive"] {
+    background-color: rgb(36, 74, 46);
+    color: rgb(255, 255, 255) !important;
+}
+
+[data-theme="dark"] [data-testid="stBaseButton-segmented_controlActive"] {
+    background-color: rgb(64, 83, 106);
+    color: rgb(255, 255, 255) !important;
+}
+
+[data-theme="light"] [data-testid="stBaseButton-segmented_control"] {
+    background-color: rgb(179, 224, 190);
+    color: black !important;
+}
+
+[data-theme="dark"] [data-testid="stBaseButton-segmented_control"] {
+    background-color: rgb(104, 99, 163);
+    color: black !important;
+}
+
+
+[data-testid="stColumn"] {
+            background-color: rgba(220, 225, 235, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #7674748e;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+/* ===== SELECTBOX ===== */
+[data-theme="dark"] div[data-testid="stSelectbox"] > div {
+    border-radius: 20px;
+    background-color: var(--st-primary-color);
+    border: 1px solid #4e96c3;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] div[data-testid="stSelectbox"] > div:hover {
+    border-color: #d7d7d7 !important;
+    border-radius: "full";
+}
+
+
+[data-theme="light"] div[data-testid="stSelectbox"] > div {
+    border-radius: 20px;
+    background-color: var(--st-primary-color);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+[data-theme="light"] div[data-testid="stSelectbox"] > div:hover {
+    border-color: #666 !important;
+    border-radius: "full";
+}
+
+/* ===== DATAFRAME ===== */
+
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* ===== CARDS (GENÉRICO PARA CONTENEDORES) ===== */
+
+div.stContainer {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* ===== SCROLLBAR (opcional) ===== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+}
+
+/* ===== ESPACIADO ===== */
+
+.element-container {
+    margin-bottom: 10px;
+}
+
+div[class*="st-key-sin_bordes"] {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+    }
+
+div[class*="st-key-sin_bordes"] [data-testid="stColumn"] {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+[class*="st-key-con_bordes"]{
+            background-color: rgba(220, 225, 235, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #7674748e;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+[data-testid="stVegaLiteChart"] {
+    background-color: transparent !important;
+}
+
+[data-testid="stVegaLiteChart"] svg {
+    background-color: transparent !important;
+}
+
+[data-testid="stVegaLiteChart"] svg .role-axis-label text, 
+[data-testid="stVegaLiteChart"] svg .role-axis-title text {
+    fill: rgb(0, 0, 0) !important;
+}
+[data-testid="stVegaLiteChart"] svg .role-axis path,
+[data-testid="stVegaLiteChart"] svg .role-axis line {
+    stroke: rgba(0, 0, 0, 0.2) !important; /* Líneas Grises */
+}
+
+[data-testid="stToast"] {
+        background-color: #586459cf !important; /* Change background (e.g., dark green) */
+        color: white !important;             /* Change text color */
+        border-radius: 10px !important;      /* Adjust rounded corners */
+        width: 300px !important;             /* Custom width */
+    }
+
+/* CONTENEDOR GENERAL */
+[data-testid="stTableStyledTable"] {
+    border-radius: 14px !important;
+    overflow: hidden !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    width: 100% !important;
+    font-size: 14px;
+    border-radius: 0px;
+    box-shadow: 10px 2px 6px rgba(0,0,0,0.05);
+}
+
+[data-testid="stTableStyledTable"] {
+    background-color: #dddddd !important;
+    color: #1a1a1a !important;
+    border: 3px solid #5b5d5b !important;
+}
+
+
+
+/* HEADER */
+[data-testid="stTableStyledTable"] thead tr {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+[data-testid="stTableStyledTable"] thead {
+    background-color: #a7b7ac !important;
+}
+
+
+/* FILAS */
+[data-testid="stTableStyledTable"] tbody tr {
+    transition: all 0.2s ease;
+}
+
+[data-testid="stTableStyledTable"] tbody tr:hover {
+    background-color: #e9f3ec !important;
+}
+
+
+/* CELDAS */
+[data-testid="stTableStyledTable"] td, 
+[data-testid="stTableStyledTable"] th {
+    padding: 10px 14px !important;
+    border-bottom: 1px solid rgba(43, 43, 43, 0.857);
+}
+
+/* BORDE FINAL */
+[data-testid="stTableStyledTable"] tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+/* 🟢 BADGE PARA "En ejecución" */
+[data-testid="stTableStyledTable"] td:has(span:contains("En ejecución")) {
+    font-weight: 600;
+}
+
+[data-testid="stTableStyledTable"] thead th {
+    color: #171717 !important;   /* gris oscuro */
+    font-weight: 700 !important;
+}
+
+[data-testid="stDataFrame"] {
+    background: #f5f1e6;
+    border-radius: 20px;
+    border: 1px solid #66635d;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.588);
+    overflow: hidden;
+}
+
+/* Ajuste interno */
+[data-testid="stDataFrame"] > div {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+[data-testid="stDataFrame"] thead th {
+    color: #000000; /* negro */
+    font-weight: 600;
+    border-bottom: 2px solid #444; /* línea más marcada */
+}
+
+/* Celdas */
+[data-testid="stDataFrame"] td {
+    border-bottom: 1px solid #444; /* líneas entre filas */
+    border-right: 1px solid #444;  /* líneas entre columnas */
+}
+
+/* Última columna sin borde derecho (opcional) */
+[data-testid="stDataFrame"] td:last-child {
+    border-right: none;
+}
+
+/* Filas */
+[data-testid="stDataFrame"] tbody tr {
+    border-bottom: 1px solid #444;
+}
+
+/* Hover (opcional) */
+[data-testid="stDataFrame"] tbody tr:hover {
+    background-color: #f0f0f0;
+}
+

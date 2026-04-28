@@ -1,0 +1,27 @@
+[theme]
+baseFontSize = 14
+font = "sans serif"
+
+[theme.dark]
+primaryColor = "#118aae"
+borderColor = "#17619e"
+baseRadius="full"
+textColor = "#ffffff"
+showWidgetBorder = true
+
+[theme.dark.sidebar]
+backgroundColor = "rgb(58, 78, 76)"
+textColor ="#ffffff"
+
+[theme.light.sidebar]
+backgroundColor = "rgb(207, 232, 228)"
+textColor = "#000000"
+
+
+[theme.light]
+backgroundColor  = "rgb(241, 237, 215)"
+primaryColor = "#348d34"
+borderColor = "#3e3c3c7f"
+baseRadius="full"
+textColor="rgb(0, 0, 0)"
+showWidgetBorder = true

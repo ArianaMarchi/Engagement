@@ -30,6 +30,7 @@ bot = commands.Bot(command_prefix='!', intents=intents, max_messages=1000)
 
 # Coonexión a base de datos y tabla de parciales
 bd = Discord()
+bd.crear_tabla()
 
 # helpers
 def email_valido(email: str) -> bool:
@@ -70,7 +71,7 @@ def validar_email(email: str, discord_id: int) -> bool:
         
         update_url = f"{BASE_URL}&wsfunction=core_user_update_users&moodlewsrestformat=json"
         response_update = requests.post(update_url, params=update_params)
-        # Si no hay error en la respuesta (Moodle devuelve null/vacio si ok)
+        
         if response_update.status_code == 200 and "exception" not in response_update.json():
             return (True, "")
         else:
@@ -106,7 +107,6 @@ def cerrar_sesiones_voz():
 
 
 def guardar_en_bd(discord_id, guild_id, stats):
-    bd = Discord()
     bd.insertar(
         discord_id,
         guild_id,
@@ -264,5 +264,9 @@ async def on_thread_create(thread):
     if thread.guild is not None:
         key = get_key(thread.owner_id, thread.guild.id)
         user_stats[key]["disc_creada"] += 1
+
+@bot.event
+async def on_close():
+    bd.cerrar_conexion()
 
 bot.run(TOKEN)

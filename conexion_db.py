@@ -150,6 +150,22 @@ class Administracion:
         """)
 
         self.cursor.execute("""
+            CREATE TABLE IF NOT EXISTS logs_actualizaciones (
+                id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+                id_actualizacion INT REFERENCES historial_actualizaciones(id),
+                id_usuario INT, 
+                id_curso INT, 
+                tipo_actualizacion INT, 
+                tabla VARCHAR(30), 
+                cant_registros_leidos INT, 
+                cant_registros_insertados INT,
+                id_estado INT REFERENCES estados(id_estado), 
+                msj VARCHAR(255), 
+                fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
+
+        self.cursor.execute("""
         CREATE TABLE IF NOT EXISTS niveles_engagement (
             id_curso INT NOT NULL PRIMARY KEY UNIQUE,
             limite_bajo INT DEFAULT 20,
@@ -491,8 +507,10 @@ class Moodle:
                 cant_revisiones INT DEFAULT 0,
                 cant_contenido_visto INT DEFAULT 0,
                 creado TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                PRIMARY KEY (user_id, course_id)
-                );
+                actualizado TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+                PRIMARY KEY (user_id, course_id),
+                CONSTRAINT unique_user_course UNIQUE(user_id, course_id)
+            );
         """)
 
     def inicializar(self):

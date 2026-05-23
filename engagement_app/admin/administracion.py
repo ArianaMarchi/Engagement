@@ -4,7 +4,7 @@ from sqlalchemy import text
 import datetime as dt
 import requests
 import time
-from services import actualizar_frecuecias, ejecutar_actualizacion, actualziar_niveles, verificar_ponderacion
+from services import actualizar_frecuecias, actualizar_ponderaciones_plataformas, ejecutar_actualizacion, actualziar_niveles, verificar_ponderacion
 
 token = st.session_state.get("token")
 user_id = st.session_state.get("user_id")
@@ -61,7 +61,6 @@ if token and user_id:
             st.session_state.asignado = asignado_db
 
         opciones = df_frec["nombre"].tolist()
-        
         index_actual = opciones.index(st.session_state.asignado)
 
         col1, col2, col3, col4 = st.columns([1, 1, 1, 1], vertical_alignment="bottom")
@@ -110,6 +109,54 @@ if token and user_id:
                 )
 
         st.subheader("Administración de métricas")
+
+        if st.session_state.get("actualizado_pond_plat"):
+            st.success("Plataformas actualizadas correctamente")
+            st.session_state["actualizado_pond_plat"] = False
+
+        if st.session_state.get("error_pond_plat"):
+            st.success(f"Error: {st.session_state['error_pond_plat']}")
+            st.session_state["error_pond_plat"] = None
+
+        query_valores_plat = f"""
+            SELECT DISTINCT ON (pond.id_plataforma)
+                plat.nombre AS nombre,
+                pond.valor AS valor,
+                pond.id_plataforma AS id_plataforma,
+                pond.id_curso AS id_curso,
+                pond.fecha AS fecha
+            FROM ponderaciones_plataformas AS pond
+            INNER JOIN plataformas AS plat ON pond.id_plataforma = plat.id_plataforma
+            WHERE pond.id_curso = -1
+            ORDER BY 
+                pond.id_plataforma,
+                pond.fecha DESC; 
+        """
+
+        df_valores_plat = conn_admin.query(query_valores_plat, ttl="0m")
+        lista_valores_plat = df_valores_plat.to_dict(orient='records')
+
+        m_col1, m_col2, m_col3, m_col4 = st.columns(4, vertical_alignment="bottom")
+        lista_valores_nuevos = {}
+        with m_col1:
+            valor_p1 = st.number_input(f"{lista_valores_plat[0]["nombre"]} (%):", min_value=0.0, max_value=98.0, value=(lista_valores_plat[0]["valor"]*100), key=f"input_{lista_valores_plat[0]["nombre"]}")
+            lista_valores_nuevos[lista_valores_plat[0]["id_plataforma"]] = valor_p1
+        with m_col2:
+            valor_p2 = st.number_input(f"{lista_valores_plat[1]["nombre"]} (%):", min_value=0.0, max_value=98.0, value=(lista_valores_plat[1]["valor"]*100), key=f"input_{lista_valores_plat[1]["nombre"]}")
+            lista_valores_nuevos[lista_valores_plat[1]["id_plataforma"]] = valor_p2
+        with m_col3:
+            valor_p3 = st.number_input(f"{lista_valores_plat[2]["nombre"]} (%):", value=(lista_valores_plat[2]["valor"]*100), min_value=0.0, max_value=98.0, key=f"input_{lista_valores_plat[2]["nombre"]}")
+            lista_valores_nuevos[lista_valores_plat[2]["id_plataforma"]] = valor_p3
+
+        with m_col4:
+            st.button(
+                f"Actualizar plataformas",
+                on_click=actualizar_ponderaciones_plataformas,
+                args=(lista_valores_plat, lista_valores_nuevos, -1),
+                type="primary",
+                disabled=((valor_p1 + valor_p2 + valor_p3) != 100),
+                width='stretch'
+            )
 
         if st.session_state.get("actualizado_metrica"):
             st.success("Métricas actualizadas correctamente")
@@ -203,7 +250,7 @@ if token and user_id:
             limite_bajo = st.number_input("Bajo hasta (%):", min_value=1, max_value=98, value=limite_bajo, key=f"input_bajo")
             st.write(f"**Nivel Bajo 🔴 0% - {limite_bajo}%**")
         with col2:
-            limite_medio = st.number_input("Medio hasta (%):", min_value=1, max_value=98, value=limite_medio, key=f"input_medio")
+            limite_medio = st.number_input("Medio hasta (%):", min_value=1, max_value=99, value=limite_medio, key=f"input_medio")
             st.write(f"**Nivel Medio 🟡 {limite_bajo+1}% - {limite_medio}%**")
         with col3:
             st.number_input("Alto hasta (%):", value=limite_alto, min_value=1, max_value=100, disabled=True, key=f"input_alto")
@@ -219,11 +266,11 @@ if token and user_id:
 
         left, middle, right = st.columns([1,1,1])
         with right:
-            if st.button(
+            st.button(
                 f"Actualizar Niveles de engagement",
-                on_click=None,
+                on_click=actualziar_niveles,
+                args=(-1, [limite_bajo, limite_medio, limite_alto]),
                 type="primary",
-                disabled= limite_bajo >= limite_medio or limite_bajo +1 == limite_medio or limite_bajo == 0 or (limite_medio - limite_bajo) <= 1 or limite_medio >= 99,
+                disabled=(limite_alto - limite_medio) <= 1 or (limite_medio - limite_bajo) <= 1,
                 width='stretch'
-            ):
-                actualziar_niveles(-1, [limite_bajo, limite_medio, limite_alto])
+            )

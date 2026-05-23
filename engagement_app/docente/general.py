@@ -60,7 +60,7 @@ if token and user_id:
 
         with st.container(key="sin_bordes"):
 
-            col1, col2, col3, col4 = st.columns([3,1,1,1], vertical_alignment="bottom")
+            col1, col2, col3, col4 = st.columns([3,2,2,2], vertical_alignment="bottom")
             with col1:
                 opciones = {c['fullname']: c['id'] for c in mis_cursos}
                 seleccion = st.selectbox("Selecciona un curso:", opciones.keys())

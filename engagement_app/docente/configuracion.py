@@ -1,6 +1,6 @@
 import streamlit as st
 from utils.styles import cargar_css
-from services import obtener_cursos_como_docente, ejecutar_actualizacion, actualziar_niveles, verificar_ponderacion
+from services import obtener_cursos_como_docente, actualizar_ponderaciones_plataformas, ejecutar_actualizacion, actualziar_niveles, verificar_ponderacion
 from sqlalchemy import text
 import datetime as dt
 import requests
@@ -19,8 +19,59 @@ if token and user_id:
     if mis_cursos:
         opciones = {c['fullname']: c['id'] for c in mis_cursos}
         seleccion = st.selectbox("Selecciona un curso:", opciones.keys())
+        seleccionado = opciones[seleccion]
         with st.container(key="sin_bordes"):
             st.subheader("Administración de métricas")
+
+            if st.session_state.get("actualizado_pond_plat"):
+                st.success("Plataformas actualizadas correctamente")
+                st.session_state["actualizado_pond_plat"] = False
+
+            if st.session_state.get("error_pond_plat"):
+                st.success(f"Error: {st.session_state['error_pond_plat']}")
+                st.session_state["error_pond_plat"] = None
+
+            query_valores_plat = f"""
+                SELECT DISTINCT ON (pond.id_plataforma)
+                    plat.nombre AS nombre,
+                    pond.valor AS valor,
+                    pond.id_plataforma AS id_plataforma,
+                    pond.id_curso AS id_curso,
+                    pond.fecha AS fecha
+                FROM ponderaciones_plataformas AS pond
+                INNER JOIN plataformas AS plat ON pond.id_plataforma = plat.id_plataforma
+                WHERE pond.id_curso IN (:id_selec, -1)
+                ORDER BY 
+                    pond.id_plataforma,
+                    CASE WHEN pond.id_curso = :id_selec THEN 0 ELSE 1 END, 
+                    pond.fecha DESC; 
+            """
+
+            df_valores_plat = conn_admin.query(query_valores_plat, params={"id_selec": seleccionado}, ttl="0m")
+            lista_valores_plat = df_valores_plat.to_dict(orient='records')
+            valores_plat = [d for d in lista_valores_plat if d.get("id_curso") == seleccionado]
+
+            m_col1, m_col2, m_col3, m_col4 = st.columns(4, vertical_alignment="bottom")
+            lista_valores_nuevos = {}
+            with m_col1:
+                valor_p1 = st.number_input(f"{lista_valores_plat[0]["nombre"]} (%):", min_value=0.0, max_value=98.0, value=(lista_valores_plat[0]["valor"]*100), key=f"input_{lista_valores_plat[0]["nombre"]}_{seleccionado}")
+                lista_valores_nuevos[lista_valores_plat[0]["id_plataforma"]] = valor_p1
+            with m_col2:
+                valor_p2 = st.number_input(f"{lista_valores_plat[1]["nombre"]} (%):", min_value=0.0, max_value=98.0, value=(lista_valores_plat[1]["valor"]*100), key=f"input_{lista_valores_plat[1]["nombre"]}_{seleccionado}")
+                lista_valores_nuevos[lista_valores_plat[1]["id_plataforma"]] = valor_p2
+            with m_col3:
+                valor_p3 = st.number_input(f"{lista_valores_plat[2]["nombre"]} (%):", value=(lista_valores_plat[2]["valor"]*100), min_value=0.0, max_value=98.0, key=f"input_{lista_valores_plat[2]["nombre"]}_{seleccionado}")
+                lista_valores_nuevos[lista_valores_plat[2]["id_plataforma"]] = valor_p3
+
+            with m_col4:
+                st.button(
+                    f"Actualizar plataformas",
+                    on_click=actualizar_ponderaciones_plataformas,
+                    args=(lista_valores_plat, lista_valores_nuevos, seleccionado),
+                    type="primary",
+                    disabled=((valor_p1 + valor_p2 + valor_p3) != 100),
+                    width='stretch'
+                )
 
             if st.session_state.get("actualizado_metrica"):
                 st.success("Métricas actualizadas correctamente")
@@ -149,11 +200,11 @@ if token and user_id:
 
             left, middle, right = st.columns([1,1,1])
             with right:
-                if st.button(
+                st.button(
                     f"Actualizar Niveles de engagement",
-                    on_click=None,
+                    on_click=actualziar_niveles,
+                    args=(id_seleccionado, [limite_bajo, limite_medio, limite_alto]),
                     type="primary",
                     disabled=(limite_alto - limite_medio) <= 1 or (limite_medio - limite_bajo) <= 1,
                     width='stretch'
-                ):
-                    actualziar_niveles(id_seleccionado, [limite_bajo, limite_medio, limite_alto])
+                )

@@ -147,6 +147,35 @@ def ejecutar_actualizacion(datos_originales, nuevos_valores, id_curso):
     except Exception as e:
         st.session_state["error_metrica"] = str(e)
 
+def actualizar_ponderaciones_plataformas(lista_valores_plat, lista_valores_nuevos, id_curso):
+    try:
+        hoy = dt.datetime.now().date()
+        with conn_admin.session as s:
+            for registro in lista_valores_plat:
+                id_plat = registro["id_plataforma"]
+                nuevo_valor = (lista_valores_nuevos[id_plat] * 0.01)
+                fecha_registro = registro["fecha"].date()
+
+                if fecha_registro == hoy:
+                    stmt = text("""
+                        UPDATE ponderaciones_plataformas
+                        SET valor = :v, fecha = CURRENT_TIMESTAMP
+                        WHERE id_plataforma = :id_p AND id_curso = :id_curso
+                        AND CAST(fecha AS DATE) = :hoy
+                    """)
+                else:
+                    stmt = text("""
+                        INSERT INTO ponderaciones_plataformas (id_curso, id_plataforma, valor, fecha)
+                        VALUES (:id_curso, :id_p, :v, CURRENT_TIMESTAMP)
+                    """)
+        
+                s.execute(stmt, {"v": nuevo_valor, "id_p": id_plat, "hoy": hoy, "id_curso": id_curso})
+            
+            s.commit()
+        st.session_state["actualizado_pond_plat"] = True
+    except Exception as e:
+        st.session_state["error_pond_plat"] = str(e)
+
 def clasificar_nivel(valor, limites):
     if valor <= limites[0]:
         return "Bajo"

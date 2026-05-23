@@ -1,6 +1,10 @@
 [theme]
-baseFontSize = 14
+baseFontSize = 18
+baseRadius="large"
 font = "sans serif"
+codeFontWeight = 600
+dataframeHeaderBackgroundColor =  "#e8e7e7"
+dataframeBorderColor = "#989797"
 
 [theme.dark]
 primaryColor = "#118aae"
@@ -22,6 +26,5 @@ textColor = "#000000"
 backgroundColor  = "rgb(241, 237, 215)"
 primaryColor = "#348d34"
 borderColor = "#3e3c3c7f"
-baseRadius="full"
 textColor="rgb(0, 0, 0)"
 showWidgetBorder = true

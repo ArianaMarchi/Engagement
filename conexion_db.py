@@ -173,6 +173,16 @@ class Administracion:
             limite_alto INT DEFAULT 100
         );""")
 
+        self.cursor.execute("""
+            CREATE TABLE IF NOT EXISTS ponderaciones_plataformas (
+                id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+                id_curso INT NOT NULL,
+                id_plataforma INT REFERENCES plataformas(id_plataforma) NOT NULL,
+                valor DOUBLE PRECISION DEFAULT 0,
+                fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );
+        """)
+
     def insertar_estados(self):
         print("Insertando estados...")
 
@@ -257,6 +267,15 @@ class Administracion:
                 0.10,
                 -1
             FROM metricas m;
+        """)
+
+        self.cursor.execute("""
+            INSERT INTO ponderaciones_plataformas (id_curso, id_plataforma, valor)
+            SELECT 
+                -1,
+                p.id_plataforma,
+                0.33
+            FROM plataformas p;
         """)
 
     def insertar_frecuencias(self):

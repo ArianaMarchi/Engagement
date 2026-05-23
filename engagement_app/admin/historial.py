@@ -9,7 +9,7 @@ conn_admin = st.connection("administracion", type="sql")
 
 token = st.session_state.get("token")
 user_id = st.session_state.get("user_id")
-
+st.set_page_config(layout="wide")
 st.header("Historial de actualizaciones")
 
 def color_estado(val):
@@ -216,7 +216,7 @@ with st.container(key="sin_bordes"):
                     "tabla": "Tabla",
                     "cant_registros_insertados": "Regs. insertados",
                     "cant_registros_leidos": "Regs. leidos",
-                    "id_actualizacion": "#Actualziación",
+                    "id_actualizacion": "Id",
                     "fecha": st.column_config.DatetimeColumn(
                             "Fecha",
                             format="DD/MM/YYYY HH:mm:ss"

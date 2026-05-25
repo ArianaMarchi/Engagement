@@ -5,12 +5,9 @@ import plotly.express as px
 import time
 import urllib.parse
 from sqlalchemy import text
-from utils.utils import get_discord_auth_url
+from utils.utils import get_discord_auth_url, descifrar_token
 from services import obtener_cursos_como_docente, visualizar_metricas
 from services import actualizar_datos, obtener_rendimiento_y_engagement
-
-token = st.session_state.get("token")
-user_id = st.session_state.get("user_id")
 
 conn = st.connection("datawarehouse", type="sql")
 conn_admin = st.connection("administracion", type="sql")
@@ -45,9 +42,12 @@ def check_status():
             time.sleep(3)
             st.rerun()
 
-
 check_status()
 st.set_page_config(layout="wide")
+
+token = descifrar_token(st.session_state.cookie_controller)
+user_id = st.session_state.get("user_id")
+
 if token and user_id:
     st.header("Panel de administración", text_alignment="center")
 
@@ -95,8 +95,6 @@ if token and user_id:
                             fecha_act = fecha.iloc[0]['fecha_max'].date().isoformat()
                         else:
                             fecha_act = "2000-01-01"
-
-                        print(fecha_act)
 
                         data_json = {
                             "id_usuario": user_id,

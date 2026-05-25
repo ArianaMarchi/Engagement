@@ -3,15 +3,17 @@ import requests
 import plotly.express as px
 import pandas as pd
 from services import obtener_rendimiento_y_engagement, visualizar_metricas
-
-token = st.session_state.get("token")
-user_id = st.session_state.get("user_id")
+from utils.utils import descifrar_token
 
 conn = st.connection("datawarehouse", type="sql")
 conn_admin = st.connection("administracion", type="sql")
 
 st.header("Panel de administración", text_alignment="center")
 st.set_page_config(layout="wide")
+
+token = descifrar_token(st.session_state.cookie_controller)
+user_id = st.session_state.get("user_id")
+
 if token and user_id:
 
     query_cursos = """

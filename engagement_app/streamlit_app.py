@@ -1,15 +1,17 @@
 import streamlit as st
+import os
 import requests
 from utils.styles import cargar_css
 from sqlalchemy import text
-#import extra_streamlit_components as cookie_manager
 from datetime import datetime, timedelta
 import time
 from streamlit_cookies_controller import CookieController
+from cryptography.fernet import Fernet
+from utils.utils import cifrar_token
 
-MOODLE_URL = "http://127.0.0.1/moodle"
-SERVICE = "moodle_mobile_app"
-MOODLE_TOKEN ="9032a3e4e53aece05eed671dfe975272"
+MOODLE_URL= os.getenv("MOODLE_URL")
+SERVICE = os.getenv("SERVICE")
+MOODLE_TOKEN = os.getenv("MOODLE_TOKEN")
 
 cargar_css()
 conn = st.connection("datawarehouse", type="sql")
@@ -30,7 +32,7 @@ def autenticar(username, password):
         "password": password,
         "service": SERVICE
     }
-    
+
     response = requests.get(url, params=params)
     data = response.json()
     
@@ -95,6 +97,51 @@ def get_userid(token, username):
         st.error(f"Error al obtener User ID: {e}")
         return None
 
+def validar_credenciales(username, password):
+    result = autenticar(username, password)
+
+    if "token" in result:
+        token = result["token"]
+        data = get_userid(token, username)
+        
+        if data:
+            user_id = list(data.keys())[0]
+            fullname = list(data.values())[0]
+
+            role_found = None
+            if user_id == 2:
+                role_found = "Admin"
+            elif es_docente(token, user_id):
+                role_found = "Docente"
+
+            if role_found:
+                st.success(f"Login como {role_found}")
+                st.session_state.token = token
+                st.session_state.user_id = user_id
+                st.session_state.fullname = fullname
+                st.session_state.role = role_found
+
+                fecha_expiracion = datetime.now() + timedelta(hours=3)
+
+                config = {
+                    "path": "/", 
+                    "same_site": "lax", 
+                    "expires": fecha_expiracion
+                }
+                
+                token_cifrado = cifrar_token(token)
+                cm.set("moodle_token", token_cifrado, **config)
+                cm.set("moodle_role", role_found, **config)
+                cm.set("moodle_user_id", user_id, **config)
+                cm.set("moodle_fullname", fullname, **config)
+                
+                time.sleep(3)
+                st.rerun()
+            else:
+                st.error("Usuario sin permisos de Admin o Docente")
+    else:
+        st.error("Credenciales incorrectas")
+
 def login():
     with st.container(key="sin_bordes_v3"):
         left, middle, right = st.columns([1, 4, 1])
@@ -107,51 +154,51 @@ def login():
                 with st.form("login_form", border=False):
                     username = st.text_input("Usuario")
                     password = st.text_input("Contraseña", type="password")
-                    submit_button = st.form_submit_button("Ingresar", width=100)
+                    if st.form_submit_button("Ingresar", width=100):
 
-                if submit_button:
-                    result = autenticar(username, password)
+                        result = autenticar(username, password)
 
-                    if "token" in result:
-                        token = result["token"]
-                        data = get_userid(token, username)
-                        
-                        if data:
-                            user_id = list(data.keys())[0]
-                            fullname = list(data.values())[0]
+                        if "token" in result:
+                            token = result["token"]
+                            data = get_userid(token, username)
+                            
+                            if data:
+                                user_id = list(data.keys())[0]
+                                fullname = list(data.values())[0]
 
-                            role_found = None
-                            if user_id == 2:
-                                role_found = "Admin"
-                            elif es_docente(token, user_id):
-                                role_found = "Docente"
+                                role_found = None
+                                if user_id == 2:
+                                    role_found = "Admin"
+                                elif es_docente(token, user_id):
+                                    role_found = "Docente"
 
-                            if role_found:
-                                st.success(f"Login como {role_found}")
-                                st.session_state.token = token
-                                st.session_state.user_id = user_id
-                                st.session_state.fullname = fullname
-                                st.session_state.role = role_found
+                                if role_found:
+                                    st.success(f"Login como {role_found}")
+                                    st.session_state.token = token
+                                    st.session_state.user_id = user_id
+                                    st.session_state.fullname = fullname
+                                    st.session_state.role = role_found
 
-                                fecha_expiracion = datetime.now() + timedelta(days=1)
+                                    fecha_expiracion = datetime.now() + timedelta(hours=3)
 
-                                config = {
-                                    "path": "/", 
-                                    "same_site": "lax", 
-                                    "expires": fecha_expiracion
-                                }
-
-                                cm.set("moodle_token", token, **config)
-                                cm.set("moodle_role", role_found, **config)
-                                cm.set("moodle_user_id", user_id, **config)
-                                cm.set("moodle_fullname", fullname, **config)
-                                
-                                time.sleep(3)
-                                st.rerun()
-                            else:
-                                st.error("Usuario sin permisos de Admin o Docente")
-                    else:
-                        st.error("Credenciales incorrectas")
+                                    config = {
+                                        "path": "/", 
+                                        "same_site": "lax", 
+                                        "expires": fecha_expiracion
+                                    }
+                                    
+                                    token_cifrado = cifrar_token(token)
+                                    cm.set("moodle_token", token_cifrado, **config)
+                                    cm.set("moodle_role", role_found, **config)
+                                    cm.set("moodle_user_id", user_id, **config)
+                                    cm.set("moodle_fullname", fullname, **config)
+                                    
+                                    time.sleep(3)
+                                    st.rerun()
+                                else:
+                                    st.error("Usuario sin permisos de Admin o Docente")
+                        else:
+                            st.error("Credenciales incorrectas")
 
 def logout():
     with st.spinner("Cerrando sesión", show_time=True):
@@ -159,8 +206,13 @@ def logout():
         nombres = list(keys.keys())
         for k in nombres:
             cm.remove(k)
-        for key in list(st.session_state.keys()):
-            del st.session_state[key]
+
+        lista_st = list(st.session_state.keys())
+
+        for key in lista_st:
+            if key not in ("ajs_anonymous_id", "_streamlit_xsrf"):
+                del st.session_state[key]
+        
         time.sleep(5)
     st.rerun()
 

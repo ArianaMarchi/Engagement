@@ -5,12 +5,13 @@ from sqlalchemy import text
 import datetime as dt
 import requests
 import time
-
-token = st.session_state.get("token")
-user_id = st.session_state.get("user_id")
+from utils.utils import descifrar_token
 
 conn = st.connection("datawarehouse", type="sql")
 conn_admin = st.connection("administracion", type="sql")
+
+token = descifrar_token(st.session_state.cookie_controller)
+user_id = st.session_state.get("user_id")
 
 if token and user_id:
     #st.title("Panel de administración", text_alignment="center")
@@ -208,3 +209,5 @@ if token and user_id:
                     disabled=(limite_alto - limite_medio) <= 1 or (limite_medio - limite_bajo) <= 1,
                     width='stretch'
                 )
+else:
+    st.error("Error de sesión. Por favor, reingresá.")

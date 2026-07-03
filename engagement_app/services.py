@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import plotly.express as px
+import altair as alt
 import time
 import urllib.parse
 from sqlalchemy import text
@@ -216,6 +217,8 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
     """
     df_cursos_eng = conn.query(query_sql, ttl="0m")
 
+    tamanio_letra = 18  
+
     with st.container(key="sin_bordes_filtro"):
 
         tab1, tab2 = st.tabs(["Engagement", "Rendimiento"])
@@ -239,14 +242,13 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
 
             colors_map = {
                 0: ["#03A042"],
-                1: ["#FA8405"],
-                2: ["#0342A0"],
-                3: ["#8603A0"]
+                1: ["#FA8511"],
+                2: ["#4084B3"],
+                3: ["#A053D4"]
             }
 
             selected_columns = columns_map[selection]
             selected_colors = colors_map[selection]
-
 
             l1, r1 = st.columns([1, 1])
             with l1:
@@ -255,23 +257,32 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                     ("Mayor a menor", "Menor a mayor"),
                     key="sort_tab1"
                 )
+
+            sort_order = "descending" if ordenar_eng == "Mayor a menor" else "ascending"
+            columna_y = selected_columns[0]
+
             if ordenar_eng == "Mayor a menor":
                 orden_eng = f"-{selected_columns[0]}"
             else:
                 orden_eng = selected_columns[0]
             
             if selection != 0:
-
-                st.bar_chart(
-                    df_cursos_eng, 
-                    x="usuario", 
-                    y=selected_columns, 
-                    color=selected_colors, 
-                    stack=False, 
-                    sort=orden_eng,
-                    horizontal=True,
-                    width="stretch"
+                chart_plataformas = (
+                    alt.Chart(df_cursos_eng)
+                    .mark_bar(color=selected_colors[0])
+                    .encode(
+                        x=alt.X(f"{columna_y}:Q").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                        y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order))
+                            .axis(
+                                labelFontSize=tamanio_letra,    
+                                labelLimit=400,                 
+                                title=None                       
+                            )
+                    )
+                    .properties(height=len(df_cursos_eng) * 35 + 70)
+                    .configure_view(step=45)
                 )
+                st.altair_chart(chart_plataformas, use_container_width=True)
             else:
                 df_cursos_eng["nivel"] = df_cursos_eng[selected_columns[0]].apply(
                 lambda x: clasificar_nivel(x, limites))
@@ -290,16 +301,24 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                 else:
                     df_filtrado = df_cursos_eng.copy()
 
-                st.bar_chart(
-                    df_filtrado, 
-                    x="usuario", 
-                    y=selected_columns[0], 
-                    stack=True,
-                    color="nivel",
-                    sort=orden_eng,        
-                    horizontal=True,
-                    width="stretch"
+                chart_general = (
+                    alt.Chart(df_filtrado)
+                    .mark_bar()
+                    .encode(
+                        x=alt.X(f"{columna_y}:Q").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                        y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order)).axis(
+                            labelFontSize=tamanio_letra,
+                            labelLimit=400,
+                            title=None
+                        ),
+                        color=alt.Color("nivel:N", scale=alt.Scale(
+                            domain=["Bajo", "Medio", "Alto"],
+                            range=["#A2D149", "#63A355", "#34853E"]
+                        ), title="Nivel de Engagement")
+                    )
+                    .properties(height=len(df_filtrado) * 35 + 70)
                 )
+                st.altair_chart(chart_general, use_container_width=True)
         with tab2:
             l2, r2 = st.columns([1, 1])
             with l2:
@@ -309,21 +328,22 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                     key="select_rendimiento",
                 )
 
-            if ordenar_rend == "Mayor a menor":
-                orden_rend = f"-nota_promedio"
-            else:
-                orden_rend ="nota_promedio"
+            sort_order_rend = "descending" if ordenar_rend == "Mayor a menor" else "ascending"
 
-            st.bar_chart(
-                df_cursos_eng, 
-                x="usuario", 
-                y="nota_promedio", 
-                color="#0398A0", 
-                stack=False, 
-                sort=orden_rend,
-                horizontal=True,
-                width="stretch"
+            chart_rendimiento = (
+                alt.Chart(df_cursos_eng)
+                .mark_bar(color="#43A9B0")
+                .encode(
+                    x=alt.X("nota_promedio:Q").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                    y=alt.Y("usuario:N", sort=alt.EncodingSortField(field="nota_promedio", order=sort_order_rend)).axis(
+                        labelFontSize=tamanio_letra,
+                        labelLimit=400,
+                        title=None
+                    )
+                )
+                .properties(height=len(df_cursos_eng) * 35 + 70)
             )
+            st.altair_chart(chart_rendimiento, use_container_width=True)
 
 def visualizar_metricas(df, nombres_a_excluir, color):
     columnas_numericas = df.select_dtypes(include=['number']).columns
@@ -333,16 +353,34 @@ def visualizar_metricas(df, nombres_a_excluir, color):
     df_plot = df_totales[~df_totales["metrica"].isin(nombres_a_excluir)]
     df_plot = df_plot.sort_values("valor", ascending=True)
 
-    st.bar_chart(
-        df_plot, 
-        x="metrica", 
-        y="valor", 
-        stack=False, 
-        sort="-valor",
-        color=color,
-        horizontal=True,
-        width="stretch"
+    tamanio_letra = 18 
+
+    base = alt.Chart(df_plot).encode(
+        y=alt.Y("metrica:N", sort="-x", axis=None),
     )
+
+    bars = base.mark_bar(color=color).encode(
+        x=alt.X("valor:Q", title="Valor").axis(
+            labelFontSize=tamanio_letra,
+            titleFontSize=tamanio_letra + 2
+        )
+    )
+
+    text = base.mark_text(
+        align='left',
+        baseline='middle',
+        dx=5,
+        fontSize=tamanio_letra
+    ).encode(
+        text='metrica:N',
+        x=alt.X('valor:Q')
+    )
+    
+    final_chart = (bars + text).properties(
+        height=len(df_plot) * 35 + 50 
+    )
+    
+    st.altair_chart(final_chart, use_container_width=True)
 
 def actualziar_niveles(id_selec, limites):
     try:
@@ -364,11 +402,11 @@ def actualziar_niveles(id_selec, limites):
 
 def verificar_ponderacion(total_ponderacion):
     if total_ponderacion > 1.0:
-        st.warning(f"La suma de las ponderaciones es {total_ponderacion:.2f}. Debe ser igual a 1.0 para habilitar el botón.")
+        st.warning(f"La suma de las ponderaciones es {total_ponderacion*100:.2f}%. Debe ser igual a 100%")
     elif total_ponderacion > 0 and total_ponderacion < 1.0:
-        st.info(f"Suma total: {total_ponderacion:.2f} (Recordá que la suma de las métricas debe ser igual a 1)")
-    elif total_ponderacion == 1.0:
-        st.info(f"Suma total: {total_ponderacion:.2f}")
+        st.warning(f"Suma actual: {total_ponderacion*100:.2f}% La suma de las métricas debe ser igual a 100%)")
+    #elif total_ponderacion == 1.0:
+    #    st.info(f"Suma total: {total_ponderacion*100:.2f}%")
 
 def actualizar_datos(data_json):
     try:

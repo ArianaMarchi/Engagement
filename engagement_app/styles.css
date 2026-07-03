@@ -24,9 +24,9 @@ h1, h2, h3 {
     box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
 }
 
-[data-testid="stMetricValue"] {
-    font-size: 18px;
-    font-weight: 600;
+[data-testid="stMetricValue"] [data-testid="stMarkdownContainer"]{
+    font-size: 1.6rem !important;
+    font-weight: 500 !important;
 }
 
 [data-theme="dark"] [data-testid="stMetricLabel"] {
@@ -35,7 +35,7 @@ h1, h2, h3 {
 }
 
 [data-theme="light"] [data-testid="stMetricLabel"] {
-    font-size: 14px;
+    font-size: 40px;
     color: #666;
 }
 
@@ -62,7 +62,7 @@ h1, h2, h3 {
     background-color: rgb(104, 99, 163);
     color: black !important;
 }
-
+/*
 [data-testid="stColumn"] {
             background-color: rgba(220, 225, 235, 0.15);
             padding: 10px;
@@ -73,6 +73,7 @@ h1, h2, h3 {
             justify-content: center;
             flex-direction: column;
         }
+*/
 
 
 /* Selectbox */
@@ -99,6 +100,10 @@ h1, h2, h3 {
 [data-theme="light"] div[data-testid="stSelectbox"] > div:hover {
     border-color: #666 !important;
     border-radius: "full";
+}
+
+[data-testid="stSelectbox"] [data-testid="stWidgetLabel"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
 }
 
 /* Cards */
@@ -129,7 +134,7 @@ div[class*="st-key-sin_bordes"] [data-testid="stColumn"] {
     background: transparent !important;
 }
 
-[class*="st-key-con_bordes"]{
+[class*="st-key-con_bordes"] [data-testid="stColumn"]{
             background-color: rgba(220, 225, 235, 0.15);
             padding: 10px;
             border-radius: 10px;
@@ -140,6 +145,29 @@ div[class*="st-key-sin_bordes"] [data-testid="stColumn"] {
             flex-direction: column;
         }
 
+[data-testid="stWidgetLabel"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stBaseButton-secondaryFormSubmit"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stMarkdown"] [data-testid="stMarkdownContainer"]{
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stBaseButton-segmented_control"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stBaseButton-segmented_controlActive"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
 
 [data-testid="stVegaLiteChart"] {
     background-color: transparent !important;
@@ -205,3 +233,11 @@ div[class*="st-key-sin_bordes"] [data-testid="stColumn"] {
     background-color: #f0f0f0;
 }
 
+[data-testid="stSidebarNavItems"] span {
+    font-size: 1.2rem !important;
+    /* font-weight: bold !important; */
+}
+
+[data-testid="stSidebarNavItems"] ul li a span {
+    font-size: 1.0rem !important;
+}

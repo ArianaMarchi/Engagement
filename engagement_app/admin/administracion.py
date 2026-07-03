@@ -93,7 +93,7 @@ if token and user_id:
                     on_click=actualizar_frecuecias,
                     args=(option, cant_dias, st.session_state.asignado, hora),
                     type="primary",
-                    width='stretch'
+                    width=200
                 )
         else:
             with col2:
@@ -106,7 +106,7 @@ if token and user_id:
                     on_click=actualizar_frecuecias,
                     args=(option, cant_dias, st.session_state.asignado, hora),
                     type="primary",
-                    width='stretch'
+                    width=200
                 )
 
         st.subheader("Administración de métricas")
@@ -156,7 +156,7 @@ if token and user_id:
                 args=(lista_valores_plat, lista_valores_nuevos, -1),
                 type="primary",
                 disabled=((valor_p1 + valor_p2 + valor_p3) != 100),
-                width='stretch'
+                width='content'
             )
 
         if st.session_state.get("actualizado_metrica"):
@@ -167,12 +167,14 @@ if token and user_id:
             st.error(f"Error: {st.session_state['error_metrica']}")
             st.session_state["error_metrica"] = None
 
-        option = st.selectbox(
-            "Seleccione una plataforma para ver las métricas",
-            ("Moodle", "Bigbluebutton", "Discord"),
-            index=None, 
-            placeholder="Seleccione una plataforma",
-        )
+        col1, col2 = st.columns(2)
+        with col1:
+            option = st.selectbox(
+                "Seleccione una plataforma para ver las métricas",
+                ("Moodle", "Bigbluebutton", "Discord"),
+                index=None, 
+                placeholder="Seleccione una plataforma",
+            )
 
         lista_metricas = []
         valores_nuevos = {}
@@ -205,18 +207,18 @@ if token and user_id:
                         val = st.number_input(
                             label=m["metrica"],
                             min_value=0.0,
-                            max_value=1.0,
-                            value=float(m["valor"]),
-                            step=0.1,
+                            max_value=100.0,
+                            value=float(m["valor"])* 100,
+                            step=0.5,
                             key=f"input_{option}_{m['id_metrica']}"
                         )
-                        valores_nuevos[m["id_metrica"]] = val
+                        valores_nuevos[m["id_metrica"]] = val * 0.01
 
             total_ponderacion = sum(valores_nuevos.values())
-            
-            verificar_ponderacion(total_ponderacion)
 
-            left, middle, right = st.columns([1,1,1])
+            left, middle, right = st.columns([2,2,1], vertical_alignment="bottom")
+            with left:
+                verificar_ponderacion(total_ponderacion)
             with right:
                 st.button(
                     f"Actualizar métricas de {option}",
@@ -265,7 +267,7 @@ if token and user_id:
         elif limite_bajo +1 == limite_medio or limite_bajo == 0:
             st.warning(f"Cada nivel debe cubrir un rango de al menos 1%).")
 
-        left, middle, right = st.columns([1,1,1])
+        left, middle, right = st.columns([2,1,1])
         with right:
             st.button(
                 f"Actualizar Niveles de engagement",

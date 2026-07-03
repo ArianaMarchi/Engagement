@@ -138,7 +138,7 @@ if token and user_id:
                 left, middle, right = st.columns([2,2,1], gap="xxsmall", vertical_alignment="bottom")
                 with right:
                     st.markdown(
-                        f"<div style='text-align: right; margin-bottom: -15px; font-size: 14px; color: #31333F;'>"
+                        f"<div style='text-align: right; margin-bottom: 8px; font-size: 18px; color: #31333F; font-weight: 500;'>"
                         f"{len(df_act)} registros"
                         f"</div>", 
                         unsafe_allow_html=True
@@ -158,7 +158,8 @@ if token and user_id:
                                 format="DD/MM/YYYY HH:mm:ss"
                             )
                     },
-                    hide_index=True
+                    hide_index=True, 
+                    height=450
                 )
             with tab2:
                 query_logs = """
@@ -203,8 +204,8 @@ if token and user_id:
                 left, middle, right = st.columns([2,2,1], gap="xxsmall", vertical_alignment="bottom")
                 with right:
                     st.markdown(
-                        f"<div style='text-align: right; margin-bottom: -15px; font-size: 14px; color: #31333F;'>"
-                        f"{len(df_logs)} registros"
+                        f"<div style='text-align: right; margin-bottom: 8px; font-size: 18px; color: #31333F; font-weight: 500;'>"
+                        f"{len(df_act)} registros"
                         f"</div>", 
                         unsafe_allow_html=True
                     )
@@ -226,7 +227,8 @@ if token and user_id:
                                 format="DD/MM/YYYY HH:mm:ss"
                             )
                     },
-                    hide_index=True
+                    hide_index=True,
+                    height=450
                 )
 else:
     st.error("Error de sesión. Por favor, reingresá.")

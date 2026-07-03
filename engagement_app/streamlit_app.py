@@ -143,62 +143,59 @@ def validar_credenciales(username, password):
         st.error("Credenciales incorrectas")
 
 def login():
-    with st.container(key="sin_bordes_v3"):
-        left, middle, right = st.columns([1, 4, 1])
-        with middle:
-            with st.container(key="con_bordes", vertical_alignment="center"):
-                l, m, r = st.columns([1,3,1])
-                with m:
-                    st.image("engagement_app/images/logo_eng_v4.png", width="stretch")
-                st.header("Iniciar sesión", width="stretch")
-                with st.form("login_form", border=False):
-                    username = st.text_input("Usuario")
-                    password = st.text_input("Contraseña", type="password")
-                    if st.form_submit_button("Ingresar", width=100):
+    left, middle, right = st.columns([2, 3, 2])
+    #with st.container(key="con_bordes", vertical_alignment="center"):
+    with middle:
+        st.image("engagement_app/images/logo_engagement_nuevo.png", width="stretch")
+        st.header("Iniciar sesión")
+        with st.form("login_form", border=False):
+            username = st.text_input("Usuario")
+            password = st.text_input("Contraseña", type="password")
+            if st.form_submit_button("Ingresar", width=100):
 
-                        result = autenticar(username, password)
+                result = autenticar(username, password)
 
-                        if "token" in result:
-                            token = result["token"]
-                            data = get_userid(token, username)
+                if "token" in result:
+                    token = result["token"]
+                    data = get_userid(token, username)
+                    
+                    if data:
+                        user_id = list(data.keys())[0]
+                        fullname = list(data.values())[0]
+
+                        role_found = None
+                        if user_id == 2:
+                            role_found = "Admin"
+                        elif es_docente(token, user_id):
+                            role_found = "Docente"
+
+                        if role_found:
+                            st.success(f"Login como {role_found}")
+                            st.session_state.token = token
+                            st.session_state.user_id = user_id
+                            st.session_state.fullname = fullname
+                            st.session_state.role = role_found
+
+                            fecha_expiracion = datetime.now() + timedelta(hours=3)
+
+                            config = {
+                                "path": "/", 
+                                "same_site": "lax", 
+                                "expires": fecha_expiracion
+                            }
                             
-                            if data:
-                                user_id = list(data.keys())[0]
-                                fullname = list(data.values())[0]
-
-                                role_found = None
-                                if user_id == 2:
-                                    role_found = "Admin"
-                                elif es_docente(token, user_id):
-                                    role_found = "Docente"
-
-                                if role_found:
-                                    st.success(f"Login como {role_found}")
-                                    st.session_state.token = token
-                                    st.session_state.user_id = user_id
-                                    st.session_state.fullname = fullname
-                                    st.session_state.role = role_found
-
-                                    fecha_expiracion = datetime.now() + timedelta(hours=3)
-
-                                    config = {
-                                        "path": "/", 
-                                        "same_site": "lax", 
-                                        "expires": fecha_expiracion
-                                    }
-                                    
-                                    token_cifrado = cifrar_token(token)
-                                    cm.set("moodle_token", token_cifrado, **config)
-                                    cm.set("moodle_role", role_found, **config)
-                                    cm.set("moodle_user_id", user_id, **config)
-                                    cm.set("moodle_fullname", fullname, **config)
-                                    
-                                    time.sleep(3)
-                                    st.rerun()
-                                else:
-                                    st.error("Usuario sin permisos de Admin o Docente")
+                            token_cifrado = cifrar_token(token)
+                            cm.set("moodle_token", token_cifrado, **config)
+                            cm.set("moodle_role", role_found, **config)
+                            cm.set("moodle_user_id", user_id, **config)
+                            cm.set("moodle_fullname", fullname, **config)
+                            
+                            time.sleep(3)
+                            st.rerun()
                         else:
-                            st.error("Credenciales incorrectas")
+                            st.error("Usuario sin permisos de Admin o Docente")
+                else:
+                    st.error("Credenciales incorrectas")
 
 def logout():
     with st.spinner("Cerrando sesión", show_time=True):
@@ -271,7 +268,7 @@ if "token" not in st.session_state:
 if not role:
     role = st.session_state.get("role")
 
-logout_page = st.Page(logout, title="Caerrar sesión", icon=":material/logout:")
+logout_page = st.Page(logout, title="Cerrar sesión", icon=":material/logout:")
 #settings = st.Page("settings.py", title="Settings", icon=":material/settings:")
 
 
@@ -331,7 +328,7 @@ if role and "code" in st.query_params:
 
 
 if role:
-    st.logo("engagement_app/images/logo_eng_v4.png", size="large")
+    st.logo("engagement_app/images/logo_engagement_nuevo.png", size="large")
     nombre_usuario = st.session_state.get('fullname')
     seccion_usuario = f"👤 {nombre_usuario} ({st.session_state.role})"
     pg = st.navigation({seccion_usuario: account_pages} | page_dict)

@@ -233,9 +233,9 @@ if token and user_id:
                     names="Plataforma",
                     values="Engagement",
                     color="Plataforma",
-                    color_discrete_map={'bigbluebutton':'#4084B3',
-                        'moodle':'#FF7F0E',
-                        'discord':'#9467BD'}
+                    color_discrete_map={'bigbluebutton':'#2F79AD',
+                                    'moodle':'#FF8C2E',
+                                    'discord':'#8352B3'}
                 )
 
                 fig.update_layout(
@@ -256,7 +256,7 @@ if token and user_id:
                     SELECT 
                         m.id_usuario,
                         u.nom_y_ape AS nombre,
-                        SUM(m.cant_acts_hechas) AS "Acts. realizadas",
+                        SUM(m.cant_acts_hechas) AS "Actividades. realizadas",
                         SUM(m.cant_discs_creadas) AS "Discusiones creadas",
                         SUM(m.cant_mensajes) AS "Mensajes",
                         SUM(m.cant_cont_visto) AS "Contenido visto",
@@ -277,7 +277,7 @@ if token and user_id:
 
                 opciones = ["General"] + df_usuarios.index.tolist()
 
-                st.subheader("Mas información del curso")
+                st.subheader("Más información del curso")
                 usuario_seleccionado_idx = st.selectbox(
                     "Seleccione un estudiante o General para ver el curso",
                     options=opciones,
@@ -298,14 +298,14 @@ if token and user_id:
                 st.subheader(f"Métricas: {nombre_display}")
 
                 if not df_filtrado.empty:
-                    visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FA8511")
+                    visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FF8C2E")
                 else:
                     st.info("No hay datos para mostrar de Moodle")
 
                 query_bbb = f"""
                         SELECT 
                             id_usuario,
-                            ROUND(SUM(duracion_usuario) / 60.0, 2) AS "Duracion (Mins)",
+                            ROUND(SUM(duracion_usuario) / 60.0, 2) AS "Duración (Mins)",
                             SUM(cant_mensajes) AS "Mensajes",
                             SUM(cant_manos_levantadas) AS "Manos levantadas",
                             SUM(cant_reacciones) AS "Reacciones",
@@ -323,7 +323,7 @@ if token and user_id:
                     df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
 
                 if not df_filtrado_bbb.empty:
-                    visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#4084B3")
+                    visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
                 else:
                     st.info("No hay datos para mostrar de Bigbluebutton")
 
@@ -347,7 +347,7 @@ if token and user_id:
                     df_filtrado_discord = df_discord[df_discord['id_usuario'] == usuario_id_real]
 
                 if not df_filtrado_discord.empty:
-                    visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#A053D4")
+                    visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#8352B3")
                 else:
                     st.info("No hay datos para mostrar de Discord")
                 
@@ -379,13 +379,13 @@ if token and user_id:
                 with st.container(key="sin_bordes", vertical_alignment="center"):
                     col_metric_4, col_metric_5= st.columns(2)
                     col_metric_4.metric(
-                        label=f"Rendimiento", 
+                        label=f"Rendimiento (Escala 0-10)", 
                         value=f"{valor_rendimiento:.2f}",
                         border=True
                     )
                     col_metric_5.metric(
-                        label=f"Nievel de engagement", 
-                        value=eng_prom,
+                        label=f"Nivel de engagement", 
+                        value=f"{eng_prom}%",
                         border=True
                     )
     else:

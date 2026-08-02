@@ -242,9 +242,9 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
 
             colors_map = {
                 0: ["#03A042"],
-                1: ["#FA8511"],
-                2: ["#4084B3"],
-                3: ["#A053D4"]
+                1: ["#FF8C2E"],
+                2: ["#2F79AD"],
+                3: ["#8352B3"]
             }
 
             selected_columns = columns_map[selection]
@@ -271,7 +271,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                     alt.Chart(df_cursos_eng)
                     .mark_bar(color=selected_colors[0])
                     .encode(
-                        x=alt.X(f"{columna_y}:Q").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                        x=alt.X(f"{columna_y}:Q", title="Engagement Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
                         y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order))
                             .axis(
                                 labelFontSize=tamanio_letra,    
@@ -305,7 +305,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                     alt.Chart(df_filtrado)
                     .mark_bar()
                     .encode(
-                        x=alt.X(f"{columna_y}:Q").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                        x=alt.X(f"{columna_y}:Q", title="Engagement Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
                         y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order)).axis(
                             labelFontSize=tamanio_letra,
                             labelLimit=400,
@@ -334,7 +334,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                 alt.Chart(df_cursos_eng)
                 .mark_bar(color="#43A9B0")
                 .encode(
-                    x=alt.X("nota_promedio:Q").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                    x=alt.X("nota_promedio:Q", title="Nota Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
                     y=alt.Y("usuario:N", sort=alt.EncodingSortField(field="nota_promedio", order=sort_order_rend)).axis(
                         labelFontSize=tamanio_letra,
                         labelLimit=400,

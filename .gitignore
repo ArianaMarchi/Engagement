@@ -6,3 +6,5 @@ __pycache__/
 .vscode/
 .idea/
 cron.log
+.streamlit/secrets.toml
+!.streamlit/secrets.toml.example

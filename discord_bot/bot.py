@@ -49,7 +49,7 @@ def validar_email(email: str, discord_id: int) -> bool:
         users = response.json()
 
         if not users or not isinstance(users, list):
-            return (False, "El correo ingresado no pertenece a un usuario de Moodle. Vuelva a ingresar su correo")
+            return (False, "El correo ingresado no pertenece a un usuario de Moodle.")
 
         user_id = users[0]['id']
 
@@ -75,11 +75,11 @@ def validar_email(email: str, discord_id: int) -> bool:
         if response_update.status_code == 200 and "exception" not in response_update.json():
             return (True, "")
         else:
-            return (False, "No se pudo asociar el usuario. Intente de nuevo mas tarde")
+            return (False, "No se pudo asociar el usuario.")
 
     except Exception as e:
         print(f"Error en Moodle: {e}")
-        return (False, "Ocurrió un problema. Intente de nuevo mas tarde")
+        return (False, "Ocurrió un problema.")
 
 
 def guardar_email(discord_id):
@@ -178,7 +178,7 @@ async def on_message(message):
 
     if not email_valido(email):
         await message.channel.send(
-            "❌ El correo no tiene un formato válido."
+            "❌ El correo no tiene un formato válido. Intente nuevamente."
         )
         return
 

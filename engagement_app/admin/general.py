@@ -91,7 +91,7 @@ if token and user_id:
                     ORDER BY t.anio;
                     """
 
-                df = conn.query(query, ttl="10m")
+                df = conn.query(query, ttl="0m")
 
                 if filtro != "Año":
                     df["periodo_año"] = df["periodo"].astype(str) + "-" + df["anio"].astype(str)
@@ -115,7 +115,7 @@ if token and user_id:
                         color=alt.Color(
                             "nombre:N",
                             title="Curso",
-                            scale=alt.Scale(scheme="category20") 
+                            scale=alt.Scale(scheme="blues") 
                         ),
                         xOffset="nombre:N" 
                     )
@@ -146,6 +146,7 @@ if token and user_id:
                 st.subheader("Engagement general por cursos")
 
                 df_cursos = conn.query(query_cursos)
+                print(df_cursos)
                 df_general = conn.query(query_general)
 
                 eng_general = df_general['eng_general'][0]
@@ -155,7 +156,7 @@ if token and user_id:
                     names='nombre',
                     values='eng_promedio',
                     hole=0.4,
-                    color_discrete_sequence=px.colors.qualitative.D3
+                    color_discrete_sequence=px.colors.sequential.Teal_r
                 )
 
                 fig.update_layout(
@@ -190,7 +191,7 @@ if token and user_id:
                         ROUND(AVG(eng_discord)::numeric, 2) AS discord
                     FROM fact_engagement
                 """
-                df = conn.query(query_plataformas, ttl="10m")
+                df = conn.query(query_plataformas)
 
                 df_pie = df.melt(
                     var_name="Plataforma",
@@ -202,9 +203,9 @@ if token and user_id:
                     names="Plataforma",
                     values="Engagement",
                     color='Plataforma',
-                    color_discrete_map={'bigbluebutton':'4084B3',
-                                    'moodle':'FF7F0E',
-                                    'discord':'9467BD'}
+                    color_discrete_map={'bigbluebutton':'#2F79AD',
+                                    'moodle':'#FF8C2E',
+                                    'discord':'#8352B3'}
                 )
                 fig.update_layout(
                     paper_bgcolor="rgba(0,0,0,0)", 
@@ -265,7 +266,7 @@ if token and user_id:
                 df_promedios = df_moodle[['id_usuario', 'Promedio']].copy()
 
                 opciones = ["General"] + df_usuarios.index.tolist()
-                st.subheader("Mas información del curso")
+                st.subheader("Más información del curso")
                 usuario_seleccionado_idx = st.selectbox(
                     "Seleccione un estudiante o General para ver el curso",
                     options=opciones, index=0,
@@ -285,14 +286,14 @@ if token and user_id:
                 st.subheader(f"Métricas: {nombre_display}")
 
                 if not df_filtrado.empty:
-                    visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FA8511")
+                    visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FF8C2E")
                 else:
                     st.info("No hay datos para mostrar de Moodle")
 
                 query_bbb = f"""
                         SELECT 
                             id_usuario,
-                            ROUND(SUM(duracion_usuario) / 60.0, 2) AS "Duracion (Mins)",
+                            ROUND(SUM(duracion_usuario) / 60.0, 2) AS "Duración (Mins)",
                             SUM(cant_mensajes) AS "Mensajes",
                             SUM(cant_manos_levantadas) AS "Manos levantadas",
                             SUM(cant_reacciones) AS "Reacciones",
@@ -310,7 +311,7 @@ if token and user_id:
                     df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
 
                 if not df_filtrado_bbb.empty:
-                    visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#4084B3")
+                    visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
                 else:
                     st.info("No hay datos para mostrar de Bigbluebutton")
 
@@ -334,7 +335,7 @@ if token and user_id:
                     df_filtrado_discord = df_discord[df_discord['id_usuario'] == usuario_id_real]
 
                 if not df_filtrado_discord.empty:
-                    visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#A053D4")
+                    visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#8352B3")
                 else:
                     st.info("No hay datos para mostrar de Discord")
                 

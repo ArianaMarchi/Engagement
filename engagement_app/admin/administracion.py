@@ -216,7 +216,7 @@ if token and user_id:
 
             total_ponderacion = sum(valores_nuevos.values())
 
-            left, middle, right = st.columns([2,2,1], vertical_alignment="bottom")
+            left, middle, right = st.columns([2,1,1], vertical_alignment="bottom")
             with left:
                 verificar_ponderacion(total_ponderacion)
             with right:

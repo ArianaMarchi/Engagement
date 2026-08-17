@@ -1,0 +1,1157 @@
+Script iniciado correctamente en:
+Script iniciado correctamente en:
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+None
+CRITICAL: Error conectando a la BD: connection to server at "localhost" (127.0.0.1), port 5432 failed: fe_sendauth: no password supplied
+
+Script iniciado correctamente en:
+tesina
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+query
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+query
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+query
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+query
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+query
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+query
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+entró al if
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+entró al if
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+entró al if
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+ultima act [[Timestamp('2026-04-22 04:29:12.121844') datetime.time(1, 45)]]
+[[1]]
+hoy: 2026-04-23 02:43:03.856917 prox_fecha:  2026-04-23 01:45:00
+[2026-04-23 02:43:03.856917] Ejecutando actualización programada en NiFi...
+Éxito: Actualización enviada a NiFi.
+entró al if
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+ultima act [[Timestamp('2026-04-23 02:43:39.361507') datetime.time(1, 45)]]
+[[1]]
+hoy: 2026-04-23 02:44:05.042506 prox_fecha:  2026-04-24 01:45:00
+[2026-04-23 02:44:05.042506] Aún no toca. Próxima: 2026-04-24 01:45:00
+entró al if
+Conexión cerrada correctamente.
+Script iniciado correctamente en:
+ejecutando funcion
+ultima act [[Timestamp('2026-04-23 02:43:39.361507') datetime.time(1, 45)]]
+[[1]]
+hoy: 2026-04-23 02:45:04.175740 prox_fecha:  2026-04-24 01:45:00
+[2026-04-23 02:45:04.175740] Aún no toca. Próxima: 2026-04-24 01:45:00
+entró al if
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 02:59:04. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 03:00:03. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 03:59:03. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 04:00:03. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 13:59:09. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 14:00:11. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 18:59:03. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 19:00:03. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 19:59:02. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 20:00:02. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 21:59:04. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 22:00:04. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 22:59:02. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 23:00:02. Próxima: 24-04-2026 01:45:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 23-04-2026 23:59:03. Próxima: 24-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 00:00:04. Próxima: 24-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 00:59:03. Próxima: 24-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 01:00:03. Próxima: 24-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 01:59:03. Próxima: 24-04-2026 02:00:00
+Conexión cerrada correctamente.
+24-04-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Éxito: Actualización enviada a NiFi.
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 02:59:05. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 03:00:03. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 03:59:02. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 04:00:02. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 04:59:03. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 24-04-2026 05:00:02. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 25-04-2026 01:59:04. Próxima: 25-04-2026 02:00:00
+Conexión cerrada correctamente.
+25-04-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 16:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 17:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 17:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 18:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 18:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 20:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 21:00:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-04-2026 21:59:03 Ejecutando actualización programada en NiFi...
+Éxito: Procesando datos.
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 25-04-2026 22:00:03. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 25-04-2026 22:59:02. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 25-04-2026 23:00:02. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 25-04-2026 23:59:05. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 00:00:06. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 00:59:05. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 01:00:02. Próxima: 26-04-2026 02:00:00
+Conexión cerrada correctamente.
+26-04-2026 20:59:06 Ejecutando actualización programada en NiFi...
+Éxito: Procesando datos.
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 21:00:02. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 21:59:03. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 22:00:02. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 22:59:02. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 23:00:02. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 26-04-2026 23:59:04. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 00:00:04. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 00:59:02. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 01:00:02. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 01:59:03. Próxima: 27-04-2026 02:00:00
+Conexión cerrada correctamente.
+27-04-2026 02:00:03 Ejecutando actualización programada en NiFi...
+Éxito: Procesando datos.
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 14:59:04. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 15:00:02. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 15:59:04. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 16:00:04. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 18:59:04. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 19:00:02. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 19:59:03. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 20:00:04. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 27-04-2026 23:59:05. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 28-04-2026 00:00:04. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 28-04-2026 00:59:03. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 28-04-2026 01:00:02. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 28-04-2026 01:59:03. Próxima: 28-04-2026 02:00:00
+Conexión cerrada correctamente.
+28-04-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+24-05-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 00:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 01:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 02:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 02:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 03:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 03:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 04:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 14:59:10 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 15:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 15:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+25-05-2026 16:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 14:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 15:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 15:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 16:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 16:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 17:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 17:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 18:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 18:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 19:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 19:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 20:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+26-05-2026 23:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 00:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 01:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 01:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 14:59:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 15:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 22:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 23:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+27-05-2026 23:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 00:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 15:59:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 16:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 17:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 17:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 18:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 18:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 19:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+28-05-2026 20:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-05-2026 00:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-05-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-05-2026 01:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-05-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-05-2026 15:59:09 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-05-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-05-2026 19:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-05-2026 20:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-05-2026 22:00:49 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-05-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-05-2026 23:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-05-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+31-05-2026 00:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+31-05-2026 00:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+31-05-2026 01:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+31-05-2026 01:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+31-05-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 14:59:08 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 15:00:09 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 15:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 16:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 17:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 17:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 18:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 18:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 19:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 20:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 21:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 22:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 23:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-06-2026 23:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 00:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 01:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 18:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 19:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 20:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 22:59:11 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 23:00:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-06-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 00:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 01:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 02:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 02:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 03:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 03:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 04:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 13:59:10 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 14:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 14:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 15:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 15:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 17:59:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 18:00:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 18:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 19:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 20:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 21:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 22:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 23:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-06-2026 23:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 00:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 01:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 01:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 17:59:12 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 18:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 18:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 19:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 19:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 20:00:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 21:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 22:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 23:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-06-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+05-06-2026 00:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+11-06-2026 19:59:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+11-06-2026 20:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+11-06-2026 21:59:13 Ejecutando actualización programada en NiFi...
+Éxito: Procesando datos.
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 11-06-2026 22:00:04. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 11-06-2026 22:59:03. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 11-06-2026 23:00:03. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 11-06-2026 23:59:04. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 12-06-2026 00:00:03. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 12-06-2026 00:59:07. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+No hay actualizaciones programadas para 12-06-2026 01:00:04. Próxima: 12-06-2026 02:00:00
+Conexión cerrada correctamente.
+12-06-2026 09:59:09 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 10:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 10:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 11:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 11:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 12:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 18:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 19:00:08 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 19:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+12-06-2026 20:00:08 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+16-06-2026 15:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+16-06-2026 16:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+16-06-2026 16:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+16-06-2026 17:00:08 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+22-06-2026 17:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+22-06-2026 18:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 15:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 16:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 17:00:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 17:59:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 18:00:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 18:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 19:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 20:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 20:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 21:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 21:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 22:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 23:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+29-06-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+30-06-2026 00:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 16:59:13 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 17:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 17:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 18:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 18:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 19:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 20:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 21:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 22:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 23:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-07-2026 23:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 00:00:16 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 01:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 02:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 13:59:21 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 14:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 14:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 15:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 15:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 22:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 23:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-07-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 00:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 00:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 01:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 01:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 02:00:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 02:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 03:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 15:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 16:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+03-07-2026 17:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-07-2026 01:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-07-2026 02:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-07-2026 21:59:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-07-2026 22:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-07-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+04-07-2026 23:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 14:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 15:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 15:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 16:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 18:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 19:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+06-07-2026 23:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+07-07-2026 00:00:09 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+07-07-2026 00:59:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+07-07-2026 01:00:06 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 14:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 15:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 15:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 16:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 19:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 20:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 21:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 22:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 22:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 23:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+10-07-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+11-07-2026 00:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+11-07-2026 00:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+11-07-2026 01:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 16:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 17:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 17:59:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 18:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 18:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 19:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 19:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 20:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 21:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 22:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 22:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 23:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+13-07-2026 23:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 00:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 00:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 01:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 01:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 02:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 02:59:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 03:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 03:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 04:00:08 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 04:59:11 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+14-07-2026 05:00:17 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-08-2026 21:59:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-08-2026 22:00:04 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-08-2026 22:59:07 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-08-2026 23:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+01-08-2026 23:59:14 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-08-2026 00:00:10 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-08-2026 00:59:05 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+02-08-2026 01:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+17-08-2026 16:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+17-08-2026 17:00:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+17-08-2026 17:59:02 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.
+17-08-2026 18:00:03 Ejecutando actualización programada en NiFi...
+Error de conexión: HTTPConnectionPool(host='localhost', port=8887): Max retries exceeded with url: /actualizar (Caused by NewConnectionError("HTTPConnection(host='localhost', port=8887): Failed to establish a new connection: [Errno 111] Connection refused"))
+Conexión cerrada correctamente.

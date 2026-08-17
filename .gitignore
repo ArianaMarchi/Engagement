@@ -1,0 +1,10 @@
+venv/
+.venv/
+.env
+__pycache__/
+*.pyc
+.vscode/
+.idea/
+cron.log
+engagement_app/.streamlit/secrets.toml
+!engagement_app/.streamlit/secrets.toml.example

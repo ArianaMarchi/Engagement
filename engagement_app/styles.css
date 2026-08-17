@@ -1,0 +1,243 @@
+/* Títulos= */
+
+h1, h2, h3 {
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+.stMainBlockContainer {
+            max-width: 1500px; 
+            padding-top: 3rem;   
+            padding-bottom: 5rem; 
+            padding-left: 1rem;   
+            padding-right: 1rem;
+            margin: auto;         
+        }
+
+/* Metrics */
+
+[data-testid="stMetric"] {
+    background-color: var(--st-primary-color);
+    padding: 0;
+    border-radius: 10px;
+    border: 1px solid #7674748e;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
+}
+
+[data-testid="stMetricValue"] [data-testid="stMarkdownContainer"]{
+    font-size: 1.6rem !important;
+    font-weight: 500 !important;
+}
+
+[data-theme="dark"] [data-testid="stMetricLabel"] {
+    font-size: 14px;
+    color: #ffffff;
+}
+
+[data-theme="light"] [data-testid="stMetricLabel"] {
+    font-size: 40px;
+    color: #666;
+}
+
+[data-testid="stMetricDelta"] {
+    font-size: 12px;
+}
+
+[data-theme="light"] [data-testid="stBaseButton-segmented_controlActive"] {
+    background-color: rgb(36, 74, 46);
+    color: rgb(255, 255, 255) !important;
+}
+
+[data-theme="dark"] [data-testid="stBaseButton-segmented_controlActive"] {
+    background-color: rgb(64, 83, 106);
+    color: rgb(255, 255, 255) !important;
+}
+
+[data-theme="light"] [data-testid="stBaseButton-segmented_control"] {
+    background-color: rgb(179, 224, 190);
+    color: black !important;
+}
+
+[data-theme="dark"] [data-testid="stBaseButton-segmented_control"] {
+    background-color: rgb(104, 99, 163);
+    color: black !important;
+}
+/*
+[data-testid="stColumn"] {
+            background-color: rgba(220, 225, 235, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #7674748e;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+*/
+
+
+/* Selectbox */
+
+[data-theme="dark"] div[data-testid="stSelectbox"] > div {
+    border-radius: 20px;
+    background-color: var(--st-primary-color);
+    border: 1px solid #4e96c3;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+[data-theme="dark"] div[data-testid="stSelectbox"] > div:hover {
+    border-color: #d7d7d7 !important;
+    border-radius: "full";
+}
+
+[data-theme="light"] div[data-testid="stSelectbox"] > div {
+    border-radius: 20px;
+    background-color: var(--st-primary-color);
+    border: 1px solid #ffffff;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+[data-theme="light"] div[data-testid="stSelectbox"] > div:hover {
+    border-color: #666 !important;
+    border-radius: "full";
+}
+
+[data-testid="stSelectbox"] [data-testid="stWidgetLabel"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+/* Cards */
+
+div.stContainer {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Espaciado */
+
+.element-container {
+    margin-bottom: 10px;
+}
+
+div[class*="st-key-sin_bordes"] {
+        border: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+    }
+
+div[class*="st-key-sin_bordes"] [data-testid="stColumn"] {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+[class*="st-key-con_bordes"] [data-testid="stColumn"]{
+            background-color: rgba(220, 225, 235, 0.15);
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #7674748e;
+            box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.564);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+[data-testid="stWidgetLabel"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stBaseButton-secondaryFormSubmit"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stMarkdown"] [data-testid="stMarkdownContainer"]{
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stBaseButton-segmented_control"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stBaseButton-segmented_controlActive"] [data-testid="stMarkdownContainer"] {
+    font-size: 1.3rem !important;
+}
+
+[data-testid="stVegaLiteChart"] {
+    background-color: transparent !important;
+}
+
+[data-testid="stVegaLiteChart"] svg {
+    background-color: transparent !important;
+}
+
+[data-testid="stVegaLiteChart"] svg .role-axis-label text, 
+[data-testid="stVegaLiteChart"] svg .role-axis-title text {
+    fill: rgb(0, 0, 0) !important;
+}
+[data-testid="stVegaLiteChart"] svg .role-axis path,
+[data-testid="stVegaLiteChart"] svg .role-axis line {
+    stroke: rgba(0, 0, 0, 0.2) !important; 
+}
+
+[data-testid="stToast"] {
+        background-color: #586459cf !important; 
+        color: white !important;            
+        border-radius: 10px !important;      
+        width: 300px !important;             
+    }
+
+/* Dataframe */
+
+[data-testid="stDataFrame"] {
+    background: #f5f1e6;
+    border-radius: 20px;
+    border: 1px solid #66635d;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.588);
+    overflow: hidden;
+}
+
+/* Ajuste interno */
+[data-testid="stDataFrame"] > div {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+[data-testid="stDataFrame"] thead th {
+    color: #000000; 
+    font-weight: 600;
+    border-bottom: 2px solid #444; 
+}
+
+/* Celdas */
+[data-testid="stDataFrame"] td {
+    border-bottom: 1px solid #444; 
+    border-right: 1px solid #444;  
+}
+
+[data-testid="stDataFrame"] td:last-child {
+    border-right: none;
+}
+
+[data-testid="stDataFrame"] tbody tr {
+    border-bottom: 1px solid #444;
+}
+
+[data-testid="stDataFrame"] tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+[data-testid="stSidebarNavItems"] span {
+    font-size: 1.2rem !important;
+    /* font-weight: bold !important; */
+}
+
+[data-testid="stSidebarNavItems"] ul li a span {
+    font-size: 1.0rem !important;
+}

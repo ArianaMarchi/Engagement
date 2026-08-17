@@ -1,0 +1,30 @@
+[theme]
+baseFontSize = 16
+baseRadius="medium"
+font = "sans serif"
+codeFontWeight = 600
+dataframeHeaderBackgroundColor =  "#e8e7e7"
+dataframeBorderColor = "#989797"
+
+[theme.dark]
+primaryColor = "#118aae"
+borderColor = "#17619e"
+baseRadius="full"
+textColor = "#ffffff"
+showWidgetBorder = true
+
+[theme.dark.sidebar]
+backgroundColor = "rgb(58, 78, 76)"
+textColor ="#ffffff"
+
+[theme.light.sidebar]
+backgroundColor = "rgb(207, 232, 228)"
+textColor = "#000000"
+
+
+[theme.light]
+backgroundColor  = "rgb(237, 233, 224)"  #"rgb(237, 229, 196)"
+primaryColor = "#2c6b61"
+borderColor = "#3e3c3c7f"
+textColor="rgb(0, 0, 0)"
+showWidgetBorder = true

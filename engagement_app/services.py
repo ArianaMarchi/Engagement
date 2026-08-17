@@ -233,92 +233,95 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                 width=500
             )
 
-            columns_map = {
-                0: ["eng_general"],
-                1: ["eng_moodle"],
-                2: ["eng_bbb"],
-                3: ["eng_discord"]
-            }
-
-            colors_map = {
-                0: ["#03A042"],
-                1: ["#FF8C2E"],
-                2: ["#2F79AD"],
-                3: ["#8352B3"]
-            }
-
-            selected_columns = columns_map[selection]
-            selected_colors = colors_map[selection]
-
-            l1, r1 = st.columns([1, 1])
-            with l1:
-                ordenar_eng = st.selectbox(
-                    "Ordenar engagement:",
-                    ("Mayor a menor", "Menor a mayor"),
-                    key="sort_tab1"
-                )
-
-            sort_order = "descending" if ordenar_eng == "Mayor a menor" else "ascending"
-            columna_y = selected_columns[0]
-
-            if ordenar_eng == "Mayor a menor":
-                orden_eng = f"-{selected_columns[0]}"
+            if selection is None:
+                st.info("Seleccione una opción para visualizar el engagement")
             else:
-                orden_eng = selected_columns[0]
-            
-            if selection != 0:
-                chart_plataformas = (
-                    alt.Chart(df_cursos_eng)
-                    .mark_bar(color=selected_colors[0])
-                    .encode(
-                        x=alt.X(f"{columna_y}:Q", title="Engagement Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
-                        y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order))
-                            .axis(
-                                labelFontSize=tamanio_letra,    
-                                labelLimit=400,                 
-                                title=None                       
-                            )
-                    )
-                    .properties(height=len(df_cursos_eng) * 35 + 70)
-                    .configure_view(step=45)
-                )
-                st.altair_chart(chart_plataformas, use_container_width=True)
-            else:
-                df_cursos_eng["nivel"] = df_cursos_eng[selected_columns[0]].apply(
-                lambda x: clasificar_nivel(x, limites))
+                columns_map = {
+                    0: ["eng_general"],
+                    1: ["eng_moodle"],
+                    2: ["eng_bbb"],
+                    3: ["eng_discord"]
+                }
 
-                with r1:
-                    nivel_selec = st.selectbox(
-                        "Filtrar por:",
-                        ("Bajo", "Medio", "Alto"),
-                        index=None,
-                        placeholder="Todos los niveles",
-                        key="filtro_general"
+                colors_map = {
+                    0: ["#03A042"],
+                    1: ["#FF8C2E"],
+                    2: ["#2F79AD"],
+                    3: ["#8352B3"]
+                }
+
+                selected_columns = columns_map[selection]
+                selected_colors = colors_map[selection]
+
+                l1, r1 = st.columns([1, 1])
+                with l1:
+                    ordenar_eng = st.selectbox(
+                        "Ordenar engagement:",
+                        ("Mayor a menor", "Menor a mayor"),
+                        key="sort_tab1"
                     )
 
-                if nivel_selec:
-                    df_filtrado = df_cursos_eng[df_cursos_eng["nivel"] == nivel_selec].copy()
+                sort_order = "descending" if ordenar_eng == "Mayor a menor" else "ascending"
+                columna_y = selected_columns[0]
+
+                if ordenar_eng == "Mayor a menor":
+                    orden_eng = f"-{selected_columns[0]}"
                 else:
-                    df_filtrado = df_cursos_eng.copy()
-
-                chart_general = (
-                    alt.Chart(df_filtrado)
-                    .mark_bar()
-                    .encode(
-                        x=alt.X(f"{columna_y}:Q", title="Engagement Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
-                        y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order)).axis(
-                            labelFontSize=tamanio_letra,
-                            labelLimit=400,
-                            title=None
-                        ),
-                        color=alt.Color("nivel:N", scale=alt.Scale(
-                            domain=["Bajo", "Medio", "Alto"],
-                            range=["#A2D149", "#63A355", "#34853E"]
-                        ), title="Nivel de Engagement")
+                    orden_eng = selected_columns[0]
+                
+                if selection != 0:
+                    chart_plataformas = (
+                        alt.Chart(df_cursos_eng)
+                        .mark_bar(color=selected_colors[0])
+                        .encode(
+                            x=alt.X(f"{columna_y}:Q", title="Engagement Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                            y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order))
+                                .axis(
+                                    labelFontSize=tamanio_letra,    
+                                    labelLimit=400,                 
+                                    title=None                       
+                                )
+                        )
+                        .properties(height=len(df_cursos_eng) * 35 + 70)
+                        .configure_view(step=45)
                     )
-                    .properties(height=len(df_filtrado) * 35 + 70)
-                )
-                st.altair_chart(chart_general, use_container_width=True)
+                    st.altair_chart(chart_plataformas, width='stretch')
+                else:
+                    df_cursos_eng["nivel"] = df_cursos_eng[selected_columns[0]].apply(
+                    lambda x: clasificar_nivel(x, limites))
+
+                    with r1:
+                        nivel_selec = st.selectbox(
+                            "Filtrar por:",
+                            ("Bajo", "Medio", "Alto"),
+                            index=None,
+                            placeholder="Todos los niveles",
+                            key="filtro_general"
+                        )
+
+                    if nivel_selec:
+                        df_filtrado = df_cursos_eng[df_cursos_eng["nivel"] == nivel_selec].copy()
+                    else:
+                        df_filtrado = df_cursos_eng.copy()
+
+                    chart_general = (
+                        alt.Chart(df_filtrado)
+                        .mark_bar()
+                        .encode(
+                            x=alt.X(f"{columna_y}:Q", title="Engagement Promedio").axis(labelFontSize=tamanio_letra, titleFontSize=tamanio_letra+2),
+                            y=alt.Y("usuario:N", sort=alt.EncodingSortField(field=columna_y, order=sort_order)).axis(
+                                labelFontSize=tamanio_letra,
+                                labelLimit=400,
+                                title=None
+                            ),
+                            color=alt.Color("nivel:N", scale=alt.Scale(
+                                domain=["Bajo", "Medio", "Alto"],
+                                range=["#A2D149", "#63A355", "#34853E"]
+                            ), title="Nivel de Engagement")
+                        )
+                        .properties(height=len(df_filtrado) * 35 + 70)
+                    )
+                    st.altair_chart(chart_general, width='stretch')
         with tab2:
             l2, r2 = st.columns([1, 1])
             with l2:
@@ -343,7 +346,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                 )
                 .properties(height=len(df_cursos_eng) * 35 + 70)
             )
-            st.altair_chart(chart_rendimiento, use_container_width=True)
+            st.altair_chart(chart_rendimiento, width='stretch')
 
 def visualizar_metricas(df, nombres_a_excluir, color):
     columnas_numericas = df.select_dtypes(include=['number']).columns
@@ -380,7 +383,7 @@ def visualizar_metricas(df, nombres_a_excluir, color):
         height=len(df_plot) * 35 + 50 
     )
     
-    st.altair_chart(final_chart, use_container_width=True)
+    st.altair_chart(final_chart, width='stretch')
 
 def actualziar_niveles(id_selec, limites):
     try:
@@ -420,3 +423,146 @@ def actualizar_datos(data_json):
         st.error("No se pudo realizar la actualización")
         time.sleep(3)
         st.rerun()
+
+def obtener_métrcias_detalladas(id_seleccionado):
+    query_moodle = f"""
+        SELECT 
+            m.id_usuario,
+            u.usuario,
+            u.nom_y_ape AS nombre,
+            SUM(m.cant_acts_hechas) AS "Actividades hechas",
+            SUM(m.cant_discs_creadas) AS "Discusiones creadas",
+            SUM(m.cant_mensajes) AS "Mensajes",
+            SUM(m.cant_cont_visto) AS "Contenido visto",
+            SUM(m.cant_encuestas_resp) AS "Encuestas respondidas",
+            SUM(m.cant_revisiones) AS "Revisiones",
+            MAX(m.nota_promedio) AS "Promedio"
+        FROM fact_moodle m
+        INNER JOIN dim_tiempo t ON m.id_tiempo = t.id_tiempo
+        INNER JOIN dim_usuarios u ON u.id_usuario = m.id_usuario
+        WHERE m.id_curso = {id_seleccionado}
+        AND t.id_tiempo = (SELECT MAX(id_tiempo) FROM fact_moodle WHERE id_curso = {id_seleccionado})
+        GROUP BY m.id_usuario, u.usuario, u.nom_y_ape;
+    """
+    df_moodle = conn.query(query_moodle, ttl="0m")
+
+    opciones = ["General"] + df_moodle.index.tolist()
+    st.subheader("Más información del curso")
+    usuario_seleccionado_idx = st.selectbox(
+        "Seleccione un estudiante o General para ver el curso",
+        options=opciones, index=0,
+        format_func=lambda x: "General" if x == "General" else f"{df_moodle.loc[x, 'nombre']} ({df_moodle.loc[x, 'usuario']})"
+    )
+
+    if usuario_seleccionado_idx == "General":
+        nombre_display = "Curso"
+        usuario_id_real = "General"
+        df_filtrado = df_moodle.copy()
+    else:
+        usuario_data = df_moodle.loc[usuario_seleccionado_idx]
+        nombre_display = usuario_data["nombre"]
+        usuario_id_real = usuario_data["id_usuario"]
+        df_filtrado = df_moodle[df_moodle['id_usuario'] == usuario_id_real]
+
+    st.subheader(f"Métricas: {nombre_display}")
+
+    if not df_filtrado.empty:
+        visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FF8C2E")
+    else:
+        st.info("No hay datos para mostrar de Moodle")
+
+    query_bbb = f"""
+            SELECT 
+                id_usuario,
+                ROUND(SUM(duracion_usuario) / 60.0, 2) AS "Duración (Mins)",
+                SUM(cant_mensajes) AS "Mensajes",
+                SUM(cant_manos_levantadas) AS "Manos levantadas",
+                SUM(cant_reacciones) AS "Reacciones",
+                ROUND(SUM(tiempo_voz) / 60.0, 2) AS "Tiempo hablado (Mins)",
+                SUM(cant_encuestas) AS "Encuestas"
+            FROM fact_bbb
+            WHERE id_curso = {id_seleccionado}
+            GROUP BY id_usuario;
+    """
+    df_bbb = conn.query(query_bbb, ttl="0m")
+
+    if usuario_seleccionado_idx == "General":
+        df_filtrado_bbb = df_bbb.copy()
+    else:
+        df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
+
+    if not df_filtrado_bbb.empty:
+        visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
+    else:
+        st.info("No hay datos para mostrar de Bigbluebutton")
+
+    query_discord = f"""
+            SELECT 
+                id_usuario,
+                SUM(cant_mensajes) AS "Mensajes",
+                SUM(cant_discs_creadas) AS "Discusiones creadas",
+                SUM(cant_reacciones) AS "Reacciones",
+                ROUND(SUM(tiempo_canal) / 60.0, 2) AS "Duración en canal de voz (Mins)",
+                SUM(cant_encuestas) AS "Encuestas"
+            FROM fact_discord
+            WHERE id_curso = {id_seleccionado}
+            GROUP BY id_usuario;
+    """
+    df_discord = conn.query(query_discord, ttl="0m")
+
+    if usuario_seleccionado_idx == "General":
+        df_filtrado_discord = df_discord.copy()
+    else:
+        df_filtrado_discord = df_discord[df_discord['id_usuario'] == usuario_id_real]
+
+    if not df_filtrado_discord.empty:
+        visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#8352B3")
+    else:
+        st.info("No hay datos para mostrar de Discord")
+
+    if usuario_seleccionado_idx == "General":
+        valor_rendimiento = df_moodle['Promedio'].mean()
+        titulo = "Calificación promedio en Moodle"
+        query_gen = f"""
+            SELECT 
+                id_curso,
+                ROUND(AVG(eng_general)::numeric, 2) AS eng_promedio
+            FROM fact_engagement e
+            WHERE id_curso = {id_seleccionado}
+            GROUP BY id_curso
+        """
+        df_general = conn.query(query_gen, ttl="0m")
+        eng_prom = float(df_general['eng_promedio'].iloc[0])
+    else:
+        query_eng_usuario = f"""
+            SELECT 
+                id_usuario,
+                eng_general
+            FROM fact_engagement
+            WHERE id_curso = {id_seleccionado} AND id_usuario = {usuario_data["id_usuario"]}
+        """
+        df_general = conn.query(query_eng_usuario, ttl="0m")
+        if not df_general.empty:
+            eng_prom = float(df_general['eng_general'].iloc[0])
+        else:
+            eng_prom = 0.0
+        fila_usuario = df_moodle[df_moodle['id_usuario'] == usuario_data["id_usuario"]]
+        if not fila_usuario.empty:
+            valor_rendimiento = fila_usuario['Promedio'].iloc[0]
+            titulo = f"Calificación promedio en Moodle"
+        else:
+            valor_rendimiento = 0
+            titulo = "Usuario sin datos"
+
+    with st.container(key="sin_bordes", vertical_alignment="center"):
+        col_metric_4, col_metric_5= st.columns(2)
+        col_metric_4.metric(
+            label=f"Rendimiento", 
+            value=f"{valor_rendimiento:.2f}",
+            border=True
+        )
+        col_metric_5.metric(
+            label=f"Nievel de engagement", 
+            value=eng_prom,
+            border=True
+        )

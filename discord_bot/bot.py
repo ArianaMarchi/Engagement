@@ -119,7 +119,7 @@ def guardar_en_bd(discord_id, guild_id, stats):
 
 # Tarea programada
 
-@tasks.loop(seconds=20)
+@tasks.loop(minutes=5)
 async def persistir_metricas_diarias():
     print("📦 Persistiendo métricas...")
 

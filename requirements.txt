@@ -34,7 +34,6 @@ pillow==12.1.1
 plotly==6.6.0
 propcache==0.4.1
 protobuf==6.33.6
-psycopg2==2.9.11
 psycopg2-binary==2.9.11
 pyarrow==23.0.1
 pydeck==0.9.1

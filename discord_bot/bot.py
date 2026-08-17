@@ -119,7 +119,7 @@ def guardar_en_bd(discord_id, guild_id, stats):
 
 # Tarea programada
 
-@tasks.loop(seconds=20)
+@tasks.loop(minutes=5)
 async def persistir_metricas_diarias():
     print("📦 Persistiendo métricas...")
 
@@ -197,11 +197,6 @@ async def on_message(message):
 
     await bot.process_commands(message)
 
-@bot.event
-async def on_message_delete(message):
-    if message.guild is not None:
-        key = get_key(message.author.id, message.guild.id)
-        user_stats[key]["mensajes"] -= 1
 
 @bot.event
 async def on_raw_reaction_add(payload):
@@ -209,12 +204,6 @@ async def on_raw_reaction_add(payload):
         key = get_key(payload.user_id, payload.guild_id)
         user_stats[key]["reacciones"] += 1
 
-
-@bot.event
-async def on_raw_reaction_remove(payload):
-    if payload.guild_id is not None:
-        key = get_key(payload.user_id, payload.guild_id)
-        user_stats[key]["reacciones"] -= 1
 
 @bot.event
 async def on_member_join(member):

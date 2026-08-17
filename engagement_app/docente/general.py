@@ -6,7 +6,7 @@ import time
 import urllib.parse
 from sqlalchemy import text
 from utils.utils import get_discord_auth_url, descifrar_token
-from services import obtener_cursos_como_docente, visualizar_metricas
+from services import obtener_cursos_como_docente, obtener_métrcias_detalladas
 from services import actualizar_datos, obtener_rendimiento_y_engagement
 
 conn = st.connection("datawarehouse", type="sql")
@@ -252,142 +252,7 @@ if token and user_id:
                 obtener_rendimiento_y_engagement(id_seleccionado, limites)
 
             with row2_col2:
-                query_moodle = f"""
-                    SELECT 
-                        m.id_usuario,
-                        u.nom_y_ape AS nombre,
-                        SUM(m.cant_acts_hechas) AS "Actividades. realizadas",
-                        SUM(m.cant_discs_creadas) AS "Discusiones creadas",
-                        SUM(m.cant_mensajes) AS "Mensajes",
-                        SUM(m.cant_cont_visto) AS "Contenido visto",
-                        SUM(m.cant_encuestas_resp) AS "Encuestas respondidas",
-                        SUM(m.cant_revisiones) AS "Revisiones",
-                        MAX(m.nota_promedio) AS "Promedio"
-                    FROM fact_moodle m
-                    INNER JOIN dim_tiempo t ON m.id_tiempo = t.id_tiempo
-                    INNER JOIN dim_usuarios u ON u.id_usuario = m.id_usuario
-                    WHERE m.id_curso = {id_seleccionado}
-                    AND t.id_tiempo = (SELECT MAX(id_tiempo) FROM fact_moodle WHERE id_curso = {id_seleccionado})
-                    GROUP BY m.id_usuario, u.nom_y_ape;
-                """
-                df_moodle = conn.query(query_moodle, ttl="0m")
-
-                df_usuarios = df_moodle[['id_usuario', 'nombre']].drop_duplicates().copy()
-                df_promedios = df_moodle[['id_usuario', 'Promedio']].copy()
-
-                opciones = ["General"] + df_usuarios.index.tolist()
-
-                st.subheader("Más información del curso")
-                usuario_seleccionado_idx = st.selectbox(
-                    "Seleccione un estudiante o General para ver el curso",
-                    options=opciones,
-                    index=0,
-                    format_func=lambda x: "General" if x == "General" else df_usuarios.loc[x, 'nombre']
-                )
-
-                if usuario_seleccionado_idx == "General":
-                    nombre_display = "Curso"
-                    usuario_id_real = "General"
-                    df_filtrado = df_moodle.copy()
-                else:
-                    usuario_data = df_usuarios.loc[usuario_seleccionado_idx]
-                    nombre_display = usuario_data["nombre"]
-                    usuario_id_real = usuario_data["id_usuario"]
-                    df_filtrado = df_moodle[df_moodle['id_usuario'] == usuario_id_real]
-
-                st.subheader(f"Métricas: {nombre_display}")
-
-                if not df_filtrado.empty:
-                    visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FF8C2E")
-                else:
-                    st.info("No hay datos para mostrar de Moodle")
-
-                query_bbb = f"""
-                        SELECT 
-                            id_usuario,
-                            ROUND(SUM(duracion_usuario) / 60.0, 2) AS "Duración (Mins)",
-                            SUM(cant_mensajes) AS "Mensajes",
-                            SUM(cant_manos_levantadas) AS "Manos levantadas",
-                            SUM(cant_reacciones) AS "Reacciones",
-                            ROUND(SUM(tiempo_voz) / 60.0, 2) AS "Tiempo hablado (Mins)",
-                            SUM(cant_encuestas) AS "Encuestas"
-                        FROM fact_bbb
-                        WHERE id_curso = {id_seleccionado}
-                        GROUP BY id_usuario;
-                """
-                df_bbb = conn.query(query_bbb, ttl="0m")
-
-                if usuario_seleccionado_idx == "General":
-                    df_filtrado_bbb = df_bbb.copy()
-                else:
-                    df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
-
-                if not df_filtrado_bbb.empty:
-                    visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
-                else:
-                    st.info("No hay datos para mostrar de Bigbluebutton")
-
-                query_discord = f"""
-                        SELECT 
-                            id_usuario,
-                            SUM(cant_mensajes) AS "Mensajes",
-                            SUM(cant_discs_creadas) AS "Discusiones creadas",
-                            SUM(cant_reacciones) AS "Reacciones",
-                            ROUND(SUM(tiempo_canal) / 60.0, 2) AS "Duración en canal de voz (Mins)",
-                            SUM(cant_encuestas) AS "Encuestas"
-                        FROM fact_discord
-                        WHERE id_curso = {id_seleccionado}
-                        GROUP BY id_usuario;
-                """
-                df_discord = conn.query(query_discord, ttl="0m")
-
-                if usuario_seleccionado_idx == "General":
-                    df_filtrado_discord = df_discord.copy()
-                else:
-                    df_filtrado_discord = df_discord[df_discord['id_usuario'] == usuario_id_real]
-
-                if not df_filtrado_discord.empty:
-                    visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#8352B3")
-                else:
-                    st.info("No hay datos para mostrar de Discord")
-                
-                if usuario_seleccionado_idx == "General":
-                    valor_rendimiento = df_promedios['Promedio'].mean()
-                    titulo = "Calificación promedio en Moodle"
-                    eng_prom =eng_promedio
-                else:
-                    query_eng_usuario = f"""
-                        SELECT 
-                            id_usuario,
-                            eng_general
-                        FROM fact_engagement
-                        WHERE id_curso = {id_seleccionado} AND id_usuario = {usuario_data["id_usuario"]}
-                    """
-                    df_general = conn.query(query_eng_usuario, ttl="0m")
-                    if not df_general.empty:
-                        eng_prom = float(df_general['eng_general'].iloc[0])
-                    else:
-                        eng_prom = 0.0
-                    fila_usuario = df_promedios[df_promedios['id_usuario'] == usuario_data["id_usuario"]]
-                    if not fila_usuario.empty:
-                        valor_rendimiento = fila_usuario['Promedio'].iloc[0]
-                        titulo = f"Calificación promedio en Moodle"
-                    else:
-                        valor_rendimiento = 0
-                        titulo = "Usuario sin datos"
-
-                with st.container(key="sin_bordes", vertical_alignment="center"):
-                    col_metric_4, col_metric_5= st.columns(2)
-                    col_metric_4.metric(
-                        label=f"Rendimiento (Escala 0-10)", 
-                        value=f"{valor_rendimiento:.2f}",
-                        border=True
-                    )
-                    col_metric_5.metric(
-                        label=f"Nivel de engagement", 
-                        value=f"{eng_prom}%",
-                        border=True
-                    )
+                obtener_métrcias_detalladas(id_seleccionado)
     else:
         st.warning("No se encontraron cursos donde figures como docente")
 else:

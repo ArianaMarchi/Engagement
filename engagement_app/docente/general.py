@@ -70,11 +70,11 @@ if token and user_id:
         """
         df_discord = conn.query(query_discord, ttl="0")
         if not df_discord.empty:
-            id_discord = df_discord.iloc[0, 0]
+            id_discord = str(df_discord.iloc[0, 0])
         else:
             id_discord = None
 
-        if id_discord and not id_discord.isdigit() or not (17 <= len(id_discord) <= 20):
+        if id_discord is not None and (not id_discord.isdigit() or not (17 <= len(id_discord) <= 20)):
             with col3:
                 if st.button("Actualizar",
                     type="primary", disabled=False, 

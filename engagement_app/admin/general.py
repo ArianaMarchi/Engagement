@@ -26,14 +26,17 @@ if token and user_id:
             INNER JOIN dim_cursos c ON c.id_curso = e.id_curso
             GROUP BY c.nombre, c.id_curso;
             """
-    df = conn.query(query_cursos, ttl="10m")
+    df = conn.query(query_cursos, ttl="0")
     lista_cursos = df[['id_curso', 'nombre']].to_dict(orient='records')
 
     with st.container(key="con_bordes", vertical_alignment="center"):
-        col1 = st.columns(1, border=True, width="stretch")[0]
-        row2_col1, row2_col2 = st.columns(2, border=True, width="stretch")
-        row3_col1, row3_col2 = st.columns([4,3], border=True, width="stretch")
+
         if lista_cursos:
+            
+            col1 = st.columns(1, border=True, width="stretch")[0]
+            row2_col1, row2_col2 = st.columns(2, border=True, width="stretch")
+            row3_col1, row3_col2 = st.columns([4,3], border=True, width="stretch")
+
             with col1:
                 st.subheader("Historial de engagement por periodo de tiempo")
 
@@ -243,6 +246,6 @@ if token and user_id:
             with row3_col2:
                 obtener_métrcias_detalladas(id_seleccionado)
         else:
-            st.warning("No se encontraron cursos")
+            st.info("No hay información para mostrar")
 else:
     st.error("Error de sesión. Por favor, reingresá.")

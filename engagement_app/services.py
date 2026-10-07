@@ -14,6 +14,7 @@ load_dotenv()
 
 MOODLE_URL= os.getenv("MOODLE_URL")
 SERVICE = os.getenv("SERVICE")
+NIFI_UPDATE_URL = os.getenv("NIFI_UPDATE_URL")
 
 token = st.session_state.get("token")
 user_id = st.session_state.get("user_id")
@@ -413,7 +414,7 @@ def verificar_ponderacion(total_ponderacion):
 
 def actualizar_datos(data_json):
     try:
-        response = requests.post("http://localhost:8887/actualizar", json=data_json, timeout=5)
+        response = requests.post(NIFI_UPDATE_URL, json=data_json, timeout=5)
         if response.status_code == 200:
             st.session_state.id_actualizacion = response.headers.get("id_actualizacion")
             st.toast("Actuaalizndo datos", duration="long", icon=":material/info:")
@@ -486,10 +487,11 @@ def obtener_métrcias_detalladas(id_seleccionado):
     """
     df_bbb = conn.query(query_bbb, ttl="0m")
 
-    if usuario_seleccionado_idx == "General":
-        df_filtrado_bbb = df_bbb.copy()
-    else:
-        df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
+    if not df_bbb.empty:
+        if usuario_seleccionado_idx == "General":
+            df_filtrado_bbb = df_bbb.copy()
+        else:
+            df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
 
     if not df_filtrado_bbb.empty:
         visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
@@ -532,7 +534,8 @@ def obtener_métrcias_detalladas(id_seleccionado):
             GROUP BY id_curso
         """
         df_general = conn.query(query_gen, ttl="0m")
-        eng_prom = float(df_general['eng_promedio'].iloc[0])
+        if not df_general.empty:
+            eng_prom = float(df_general['eng_promedio'].iloc[0])
     else:
         query_eng_usuario = f"""
             SELECT 

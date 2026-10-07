@@ -7,7 +7,7 @@ import requests
 import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
-from conexion_db import Discord
+from db_initializer.conexion_db import Discord
 #from passlib.hash import argon2
 
 # configuración
@@ -16,7 +16,8 @@ load_dotenv()
 TOKEN = os.getenv("DISCORD_TOKEN")
 #GUILD_ID = int(os.getenv("DISCORD_GUILD"))
 MOODLE_TOKEN = os.getenv("MOODLE_TOKEN")
-BASE_URL = F"http://127.0.0.1/moodle/webservice/rest/server.php?wstoken={MOODLE_TOKEN}"
+MOODLE_URL = os.getenv("MOODLE_URL")
+BASE_URL = F"{MOODLE_URL}/webservice/rest/server.php?wstoken={MOODLE_TOKEN}"
 
 intents = discord.Intents.default()
 intents.members = True
@@ -38,8 +39,6 @@ def email_valido(email: str) -> bool:
 
 def get_key(discord_id, guild_id):
     return (discord_id, guild_id)
-
-import requests
 
 def validar_email(email: str, discord_id: int) -> bool:
     try:

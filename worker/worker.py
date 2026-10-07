@@ -1,9 +1,12 @@
 import pandas as pd
 import datetime as dt
+import os
 import requests
 import time
-from conexion_db import Administracion 
+from db_initializer.conexion_db import Administracion 
 
+
+NIFI_UPDATE_URL = os.getenv("NIFI_UPDATE_URL")
 
 def check_and_run_update():
     try:
@@ -49,7 +52,7 @@ def check_and_run_update():
                 "tipo": "Automática"
             }
             try:
-                response = requests.post("http://localhost:8887/actualizar", json=data_json, timeout=10)
+                response = requests.post(NIFI_UPDATE_URL, json=data_json, timeout=10)
                 
                 if response.status_code == 200:
                     print("Éxito: Procesando datos.")

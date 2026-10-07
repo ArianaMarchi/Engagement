@@ -1,0 +1,236 @@
+version: '3.8'
+
+networks:
+  analytics_net:
+    driver: bridge
+
+volumes:
+  nifi_conf:
+  nifi_state:
+  nifi_database:
+  nifi_flowfile:
+  nifi_content:
+  nifi_provenance:
+  nifi_logs:
+  nifi_drivers:
+  datawarehouse_db_data:
+  administracion_db_data:
+  moodle_db_data:
+  discord_db_data:
+
+services:
+  datawarehouse_db:
+    container_name: datawarehouse_db
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_DW_NAME}
+      DB_DW_HOST: ${DB_DW_HOST}
+    volumes:
+      - datawarehouse_db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_DW_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - analytics_net
+
+  administracion_db:
+    container_name: administracion_db
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_ADMIN_NAME}
+      DB_ADMIN_HOST: ${DB_ADMIN_HOST}
+    volumes:
+      - administracion_db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_ADMIN_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - analytics_net
+
+  moodle_db:
+    container_name: moodle_db
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_MOODLE_NAME}
+      DB_MOODLE_HOST: ${DB_MOODLE_HOST}
+    volumes:
+      - moodle_db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_MOODLE_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - analytics_net
+
+  discord_db:
+    container_name: discord_db
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASS}
+      POSTGRES_DB: ${DB_DISCORD_NAME}
+      DB_DISCORD_HOST: ${DB_DISCORD_HOST}
+    volumes:
+      - discord_db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_DISCORD_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - analytics_net
+
+  nifi:
+    build:
+      context: .
+      dockerfile: apache_nifi/Dockerfile
+    container_name: nifi
+    restart: always
+    ports:
+      - "8443:8443"  
+      - ${MOODLE_LOGSTORE_PORT}:${MOODLE_LOGSTORE_PORT}
+      - ${BBB_PORT}:${BBB_PORT}
+    env_file:
+      - .env
+    volumes:
+      - nifi_conf:/opt/nifi/nifi-current/conf
+      - nifi_state:/opt/nifi/nifi-current/state
+      - nifi_database:/opt/nifi/nifi-current/database_repository
+      - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
+      - nifi_content:/opt/nifi/nifi-current/content_repository
+      - nifi_provenance:/opt/nifi/nifi-current/provenance_repository
+      - nifi_logs:/opt/nifi/nifi-current/logs
+      - nifi_drivers:/opt/nifi/nifi-current/drivers
+    healthcheck:
+      test: ["CMD", "curl", "-k", "https://nifi:8443/nifi"]
+      interval: 30s
+      retries: 5
+      timeout: 10s
+    networks:
+      - analytics_net
+    extra_hosts:
+      - "docker.internal:host-gateway"
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: engagement_app/Dockerfile
+    container_name: engagement_app
+    restart: always
+    environment:
+      - MOODLE_URL=${MOODLE_URL}
+      - SERVICE=${SERVICE}
+      - CLIENT_ID=${CLIENT_ID}
+      - CLIENT_SECRET=${CLIENT_SECRET}
+      - REDIRECT_URI=${REDIRECT_URI}
+      - COOKIES_SECRET_KEY=${COOKIES_SECRET_KEY}
+      - NIFI_UPDATE_URL=${NIFI_UPDATE_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_DW_NAME=${DB_DW_NAME}
+      - DB_ADMIN_NAME=${DB_ADMIN_NAME}
+      - DB_MOODLE_NAME=${DB_MOODLE_NAME}
+      - DB_DISCORD_NAME=${DB_DISCORD_NAME}
+      - DB_DW_HOST=${DB_DW_HOST}
+      - DB_ADMIN_HOST=${DB_ADMIN_HOST}
+      - DB_MOODLE_HOST=${DB_MOODLE_HOST}
+      - DB_DISCORD_HOST=${DB_DISCORD_HOST}
+    ports:
+      - "8501:8501"
+    networks:
+      - analytics_net
+    depends_on:
+      nifi:
+        condition: service_healthy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  discord_bot:
+    build:
+      context: .
+      dockerfile: discord_bot/Dockerfile
+    container_name: discord_bot
+    restart: always
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - MOODLE_TOKEN=${MOODLE_TOKEN}
+      - MOODLE_URL=${MOODLE_URL}
+      - PYTHONPATH=/engagement
+    extra_hosts:
+      - "docker.internal:host-gateway"
+    networks:
+      - analytics_net
+    depends_on:
+      discord_db:
+        condition: service_healthy
+
+  cron_worker:
+    build:
+      context: . 
+      dockerfile: worker/Dockerfile
+    container_name: cron_worker
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/engagement
+      - NIFI_UPDATE_URL=${NIFI_UPDATE_URL}
+    networks:
+      - analytics_net
+    depends_on:
+      nifi:
+        condition: service_healthy
+      datawarehouse_db:
+        condition: service_healthy
+      administracion_db:
+        condition: service_healthy
+
+  db_initializer:
+    build:
+      context: .
+      dockerfile: db_initializer/Dockerfile
+    container_name: db_initializer
+    environment:
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_DW_NAME=${DB_DW_NAME}
+      - DB_ADMIN_NAME=${DB_ADMIN_NAME}
+      - DB_MOODLE_NAME=${DB_MOODLE_NAME}
+      - DB_DISCORD_NAME=${DB_DISCORD_NAME}
+      - DB_DW_HOST=${DB_DW_HOST}
+      - DB_ADMIN_HOST=${DB_ADMIN_HOST}
+      - DB_MOODLE_HOST=${DB_MOODLE_HOST}
+      - DB_DISCORD_HOST=${DB_DISCORD_HOST}
+    networks:
+      - analytics_net
+    depends_on:
+      datawarehouse_db:
+        condition: service_healthy
+      administracion_db:
+        condition: service_healthy
+      moodle_db:
+        condition: service_healthy
+      discord_db:
+        condition: service_healthy

@@ -205,7 +205,7 @@ if token and user_id:
                 with right:
                     st.markdown(
                         f"<div style='text-align: right; margin-bottom: 8px; font-size: 18px; color: #31333F; font-weight: 500;'>"
-                        f"{len(df_act)} registros"
+                        f"{len(df_logs)} registros"
                         f"</div>", 
                         unsafe_allow_html=True
                     )

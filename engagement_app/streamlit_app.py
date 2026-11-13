@@ -110,12 +110,12 @@ def validar_credenciales(username, password):
 
             role_found = None
             if user_id == 2:
-                role_found = "Admin"
+                role_found = "Administrador"
             elif es_docente(token, user_id):
                 role_found = "Docente"
 
             if role_found:
-                st.success(f"Login como {role_found}")
+                st.success(f"Accediendo como {role_found}")
                 st.session_state.token = token
                 st.session_state.user_id = user_id
                 st.session_state.fullname = fullname
@@ -165,12 +165,12 @@ def login():
 
                         role_found = None
                         if user_id == 2:
-                            role_found = "Admin"
+                            role_found = "Administrador"
                         elif es_docente(token, user_id):
                             role_found = "Docente"
 
                         if role_found:
-                            st.success(f"Login como {role_found}")
+                            st.success(f"Accediendo como {role_found}")
                             st.session_state.token = token
                             st.session_state.user_id = user_id
                             st.session_state.fullname = fullname

@@ -190,7 +190,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
     option_map = {
         0: "General",
         1: "Moodle",
-        2: "Bigbluebutton",
+        2: "BigBlueButton",
         3: "Discord"
     }
 
@@ -271,6 +271,9 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                     orden_eng = selected_columns[0]
                 
                 if selection != 0:
+
+                    altura = max(len(df_cursos_eng) * 35 + 70, 180) if not df_cursos_eng.empty else 150
+
                     chart_plataformas = (
                         alt.Chart(df_cursos_eng)
                         .mark_bar(color=selected_colors[0])
@@ -283,7 +286,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                                     title=None                       
                                 )
                         )
-                        .properties(height=len(df_cursos_eng) * 35 + 70)
+                        .properties(height=altura)
                         .configure_view(step=45)
                     )
                     st.altair_chart(chart_plataformas, width='stretch')
@@ -305,6 +308,8 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                     else:
                         df_filtrado = df_cursos_eng.copy()
 
+                    altura = max(len(df_filtrado) * 35 + 70, 180) if not df_filtrado.empty else 150
+
                     chart_general = (
                         alt.Chart(df_filtrado)
                         .mark_bar()
@@ -320,7 +325,7 @@ def obtener_rendimiento_y_engagement(id_curso, limites):
                                 range=["#A2D149", "#63A355", "#34853E"]
                             ), title="Nivel de Engagement")
                         )
-                        .properties(height=len(df_filtrado) * 35 + 70)
+                        .properties(height=altura)
                     )
                     st.altair_chart(chart_general, width='stretch')
         with tab2:
@@ -466,11 +471,15 @@ def obtener_métrcias_detalladas(id_seleccionado):
         df_filtrado = df_moodle[df_moodle['id_usuario'] == usuario_id_real]
 
     st.subheader(f"Métricas: {nombre_display}")
+    
+    if df_filtrado.empty:
+        fila_ceros = {col: 0 for col in df_moodle.columns}
+        fila_ceros["id_curso"] = id_seleccionado
+        fila_ceros["id_usuario"] = usuario_id_real
+        df_filtrado = pd.DataFrame([fila_ceros])
 
-    if not df_filtrado.empty:
-        visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FF8C2E")
-    else:
-        st.info("No hay datos para mostrar de Moodle")
+    st.badge("Moodle", color="orange")
+    visualizar_metricas(df_filtrado, ["id_curso", "id_usuario", "Promedio"], "#FF8C2E")
 
     query_bbb = f"""
             SELECT 
@@ -487,16 +496,19 @@ def obtener_métrcias_detalladas(id_seleccionado):
     """
     df_bbb = conn.query(query_bbb, ttl="0m")
 
-    if not df_bbb.empty:
-        if usuario_seleccionado_idx == "General":
-            df_filtrado_bbb = df_bbb.copy()
-        else:
-            df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
-
-    if not df_filtrado_bbb.empty:
-        visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
+    if usuario_seleccionado_idx == "General":
+        df_filtrado_bbb = df_bbb.copy()
     else:
-        st.info("No hay datos para mostrar de Bigbluebutton")
+        df_filtrado_bbb = df_bbb[df_bbb['id_usuario'] == usuario_id_real]
+        
+    if df_filtrado_bbb.empty:
+        fila_ceros = {col: 0 for col in df_bbb.columns}
+        fila_ceros["id_curso"] = id_seleccionado
+        fila_ceros["id_usuario"] = usuario_id_real
+        df_filtrado_bbb = pd.DataFrame([fila_ceros])
+    
+    st.badge("BigBlueButton", color="blue")
+    visualizar_metricas(df_filtrado_bbb, ["id_curso", "id_usuario"], "#2F79AD")
 
     query_discord = f"""
             SELECT 
@@ -517,13 +529,23 @@ def obtener_métrcias_detalladas(id_seleccionado):
     else:
         df_filtrado_discord = df_discord[df_discord['id_usuario'] == usuario_id_real]
 
-    if not df_filtrado_discord.empty:
-        visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#8352B3")
-    else:
-        st.info("No hay datos para mostrar de Discord")
+    if df_filtrado_discord.empty:
+        fila_ceros_disc = {col: 0 for col in df_discord.columns}
+        fila_ceros_disc["id_curso"] = id_seleccionado
+        fila_ceros_disc["id_usuario"] = usuario_id_real
+        df_filtrado_discord = pd.DataFrame([fila_ceros_disc])
+    
+    st.badge("Discord", color="violet")
+    visualizar_metricas(df_filtrado_discord, ["id_curso", "id_usuario"], "#8352B3")
 
+    eng_prom = 0.0
+    valor_rendimiento = 0.0
+    
     if usuario_seleccionado_idx == "General":
-        valor_rendimiento = df_moodle['Promedio'].mean()
+        if not df_moodle.empty:
+            valor_rendimiento = df_moodle['Promedio'].mean()
+            if pd.isna(valor_rendimiento):
+                valor_rendimiento = 0.0
         titulo = "Calificación promedio en Moodle"
         query_gen = f"""
             SELECT 
@@ -534,6 +556,7 @@ def obtener_métrcias_detalladas(id_seleccionado):
             GROUP BY id_curso
         """
         df_general = conn.query(query_gen, ttl="0m")
+
         if not df_general.empty:
             eng_prom = float(df_general['eng_promedio'].iloc[0])
     else:
@@ -547,14 +570,15 @@ def obtener_métrcias_detalladas(id_seleccionado):
         df_general = conn.query(query_eng_usuario, ttl="0m")
         if not df_general.empty:
             eng_prom = float(df_general['eng_general'].iloc[0])
-        else:
-            eng_prom = 0.0
+
         fila_usuario = df_moodle[df_moodle['id_usuario'] == usuario_data["id_usuario"]]
+        
         if not fila_usuario.empty:
-            valor_rendimiento = fila_usuario['Promedio'].iloc[0]
+            val_rend = float(fila_usuario['Promedio'].iloc[0])
             titulo = f"Calificación promedio en Moodle"
+            if pd.notna(val_rend):
+                valor_rendimiento = float(val_rend)
         else:
-            valor_rendimiento = 0
             titulo = "Usuario sin datos"
 
     with st.container(key="sin_bordes", vertical_alignment="center"):
@@ -565,7 +589,7 @@ def obtener_métrcias_detalladas(id_seleccionado):
             border=True
         )
         col_metric_5.metric(
-            label=f"Nievel de engagement", 
-            value=eng_prom,
+            label=f"Nivel de engagement", 
+            value=f"{eng_prom:.2f}",
             border=True
         )

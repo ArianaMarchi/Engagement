@@ -21,9 +21,9 @@ if token and user_id:
             SELECT 
                 c.id_curso,
                 c.nombre, 
-                ROUND(AVG(e.eng_general)::numeric, 2) AS eng_promedio
-            FROM fact_engagement e
-            INNER JOIN dim_cursos c ON c.id_curso = e.id_curso
+                COALESCE(ROUND(AVG(e.eng_general)::numeric, 2), 0.0) AS eng_promedio
+            FROM dim_cursos c
+            LEFT JOIN fact_engagement e ON c.id_curso = e.id_curso
             GROUP BY c.nombre, c.id_curso;
             """
     df = conn.query(query_cursos, ttl="0")
@@ -52,7 +52,7 @@ if token and user_id:
                     FROM fact_engagement e
                     INNER JOIN dim_cursos c ON c.id_curso = e.id_curso
                     INNER JOIN dim_tiempo t ON e.id_tiempo = t.id_tiempo
-                    GROUP BY c.nombre, t.mes, t.anio
+                    GROUP BY c.id_curso, c.nombre, t.mes, t.anio
                     ORDER BY t.mes, t.anio;
                     """
                 elif filtro == "Semana":
@@ -65,7 +65,7 @@ if token and user_id:
                     FROM fact_engagement e
                     INNER JOIN dim_cursos c ON c.id_curso = e.id_curso
                     INNER JOIN dim_tiempo t ON e.id_tiempo = t.id_tiempo
-                    GROUP BY c.nombre, t.semana, t.anio
+                    GROUP BY c.id_curso, c.nombre, t.semana, t.anio
                     ORDER BY t.semana, t.anio;
                     """
                 elif filtro == "Semestre":
@@ -78,7 +78,7 @@ if token and user_id:
                     FROM fact_engagement e
                     INNER JOIN dim_cursos c ON c.id_curso = e.id_curso
                     INNER JOIN dim_tiempo t ON e.id_tiempo = t.id_tiempo
-                    GROUP BY c.nombre, t.semestre, t.anio
+                    GROUP BY c.id_curso, c.nombre, t.semestre, t.anio
                     ORDER BY t.semestre, t.anio;
                     """
                 elif filtro == "Año":
@@ -90,7 +90,7 @@ if token and user_id:
                     FROM fact_engagement e
                     INNER JOIN dim_cursos c ON c.id_curso = e.id_curso
                     INNER JOIN dim_tiempo t ON e.id_tiempo = t.id_tiempo
-                    GROUP BY c.nombre, t.anio
+                    GROUP BY c.id_curso, c.nombre, t.anio
                     ORDER BY t.anio;
                     """
 
@@ -133,11 +133,11 @@ if token and user_id:
                 query_cursos = """
                     SELECT 
                         c.nombre,
-                        ROUND(AVG(e.eng_general)::numeric, 2) AS eng_promedio
+                        COALESCE(ROUND(AVG(e.eng_general)::numeric, 2), 0.0) AS eng_promedio
                     FROM fact_engagement e
-                    INNER JOIN dim_cursos c 
+                    RIGHT JOIN dim_cursos c 
                         ON c.id_curso = e.id_curso
-                    GROUP BY c.nombre
+                    GROUP BY c.id_curso, c.nombre
                     """
 
                 query_general = """

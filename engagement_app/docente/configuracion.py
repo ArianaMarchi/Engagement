@@ -88,7 +88,7 @@ if token and user_id:
         with col1:
             option = st.selectbox(
                 "Seleccione una plataforma para ver las métricas",
-                ("Moodle", "Bigbluebutton", "Discord"),
+                ("Moodle", "BigBlueButton", "Discord"),
                 index=None, 
                 placeholder="Seleccione una plataforma",
             )
